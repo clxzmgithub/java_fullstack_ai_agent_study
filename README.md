@@ -43,6 +43,20 @@
 | Spring Data | JPA / Redis / ES 集成 |
 | Spring Batch | 批处理架构 / Job & Step 设计 |
 
+#### 🔬 重点源码学习
+| 源码模块 | 核心类 / 方法 | 学习要点 |
+|----------|--------------|----------|
+| **IoC 容器启动** | `AbstractApplicationContext#refresh()` | 12 步启动流程 / BeanDefinition 注册 / BeanFactory 初始化 |
+| **Bean 生命周期** | `AbstractAutowireCapableBeanFactory#doCreateBean()` | 实例化 → 属性注入 → Aware → BeanPostProcessor → init → 销毁 |
+| **AOP 代理创建** | `AbstractAutoProxyCreator#postProcessAfterInitialization()` | JDK 动态代理 vs CGLIB / 切点匹配 / 拦截器链执行 |
+| **事务管理** | `TransactionInterceptor#invoke()` | 事务传播行为 / 开启-提交-回滚流程 / 与 AOP 的结合 |
+| **自动装配** | `AutoConfigurationImportSelector#selectImports()` | `spring.factories` / 条件装配 `@Conditional` / SPI 机制 |
+| **MVC 请求处理** | `DispatcherServlet#doDispatch()` | HandlerMapping → HandlerAdapter → 参数解析 → 返回值处理 |
+| **事件机制** | `SimpleApplicationEventMulticaster#multicastEvent()` | 同步/异步事件 / 观察者模式 / 自定义事件 |
+| **循环依赖** | 三级缓存（`singletonObjects` / `earlySingletonObjects` / `singletonFactories`）| 解决流程 / 为何二级缓存不够 / 构造注入为何无法解决 |
+| **Spring Cloud Gateway** | `RoutePredicateHandlerMapping` / `FilteringWebHandler` | 路由匹配 / 过滤器链 / 全局过滤器 vs 局部过滤器 |
+| **OpenFeign 调用链** | `FeignClientFactoryBean` / `ReflectiveFeign#newInstance()` | 动态代理生成 / 负载均衡集成 / 重试与降级 |
+
 ### 🗄️ 数据库与存储
 | 技术 | 学习要点 |
 |------|---------|
@@ -302,11 +316,20 @@ java_fullstack_ai_agent_study/
 ├── README.md                    # 项目总览（当前文件）
 ├── meituan_work_space(MWS).md   # 美团内部技术平台组件索引（MWS）
 │
+├── 美团工具服务导航/              # 美团内部工具服务导航（按角色分类）
+│   ├── 前端工程师.md             #   前端工程师工具导航
+│   ├── 后台&系统工程师.md        #   后台 & 系统工程师工具导航
+│   ├── 算法工程师.md             #   算法工程师工具导航
+│   ├── 数据工程师.md             #   数据工程师工具导航
+│   ├── 测试工程师.md             #   测试工程师工具导航
+│   └── 运维工程师.md             #   运维工程师工具导航
+│
 ├── spring/                      # Spring 全家桶实践
 │   ├── spring-core/             #   IoC / AOP 实验
 │   ├── spring-boot/             #   自动装配 / Starter 开发
 │   ├── spring-cloud/            #   微服务体系
-│   └── spring-security/         #   认证授权
+│   ├── spring-security/         #   认证授权
+│   └── source-code/             #   重点源码分析（IoC/AOP/事务/MVC/自动装配）
 │
 ├── databases/                   # 数据库与存储
 │   ├── mysql/                   #   SQL 优化 / 事务 / 分库分表
@@ -428,7 +451,7 @@ java_fullstack_ai_agent_study/
   </thead>
   <tbody>
     <tr>
-      <td rowspan="5"><b>🧩 Spring 全家桶</b></td>
+      <td rowspan="6"><b>🧩 Spring 全家桶</b></td>
       <td>Spring Framework（IoC / AOP / 事件机制）</td>
       <td>🔜 待开始</td>
       <td></td>
@@ -452,6 +475,11 @@ java_fullstack_ai_agent_study/
       <td>Spring Data / Batch</td>
       <td>🔜 待开始</td>
       <td></td>
+    </tr>
+    <tr>
+      <td>🔬 重点源码（IoC 启动 / Bean 生命周期 / AOP 代理 / 事务 / 自动装配 / MVC / 循环依赖）</td>
+      <td>🔜 待开始</td>
+      <td>深度优先</td>
     </tr>
     <tr>
       <td rowspan="5"><b>🗄️ 数据库与存储</b></td>
