@@ -15,8 +15,8 @@
 
 本项目是一个面向**工程实践**的系统性学习仓库，**不是真实的生产项目**。聚焦于 Java 全栈工程化体系的深度实践，横跨后端架构、分布式系统、大数据生态、数据分析、风控与爬虫、前端、多语言拓展、AI/Agent 应用开发等方向，以动手实验、场景设计、面试题解析为主要学习载体，逐步构建完整的全栈工程师知识体系。
 
-**核心学习方向（15 大板块）：**
-`Spring 全家桶` · `数据库与存储` · `消息队列` · `分布式系统` · `架构设计` · `系统设计与面试题` · `稳定性保障` · `网络与通信` · `认证授权与安全` · `容器与云原生` · `大数据生态` · `数据分析` · `爬虫·逆向·反爬·风控` · `多语言拓展 + 前端` · `AI 算法理论 + AI/Agent 开发`
+**核心学习方向（16 大板块）：**
+`Spring 全家桶` · `数据库与存储` · `消息队列` · `分布式系统` · `架构设计` · `系统设计与面试题` · `稳定性保障` · `网络与通信` · `认证授权与安全` · `云计算 & 云原生` · `大数据生态` · `数据分析` · `爬虫·逆向·反爬·风控` · `多语言拓展 + 前端` · `AI 算法理论 + AI/Agent 开发` · `构建与工程化`
 
 > ⚠️ **关联项目分工说明**
 >
@@ -105,10 +105,19 @@
 | 幂等性 | Token 机制 / 数据库唯一键 / Redis 去重 |
 | 冗余 | 数据冗余 / 服务多副本 / 异地多活 |
 
-### 🐳 容器与云原生
-- **Docker**：镜像构建 / 网络模型 / Volume 管理
-- **Kubernetes**：Pod / Service / Ingress / HPA / 滚动发布
-- **Crane**：美团内部容器调度平台实践
+### ☁️ 云计算 & 云原生
+
+| 方向 | 技术与方案 |
+|------|----------|
+| **容器化** | Docker（镜像构建 / 多阶段构建 / 网络模型 / Volume 管理）|
+| **容器编排** | Kubernetes（Pod / Deployment / Service / Ingress / HPA / 滚动发布 / 灰度）|
+| **Service Mesh** | Istio / Envoy（流量管理 / 熔断 / 链路追踪 / mTLS）|
+| **Serverless** | FaaS 原理 / 冷启动优化 / 云函数应用场景 |
+| **云平台核心服务** | 计算（ECS/EKS）/ 存储（OSS/S3）/ 网络（VPC/LB/NAT）/ 数据库云服务 |
+| **IaC 基础设施即代码** | Terraform / Helm Chart / ArgoCD / GitOps 工作流 |
+| **可观测性** | Prometheus + Grafana / ELK / Jaeger 链路追踪 / OpenTelemetry |
+| **CI/CD** | Jenkins / GitHub Actions / 流水线设计 / 蓝绿/金丝雀发布 |
+| **内部平台实践** | Crane（美团容器调度）/ HULK（美团云平台）/ 云原生改造落地 |
 
 ### 🌍 多语言拓展
 
@@ -320,9 +329,14 @@ java_fullstack_ai_agent_study/
 │
 ├── stability/                   # 稳定性（限流 / 熔断 / 幂等）
 │
-├── cloud-native/                # 容器与云原生
-│   ├── docker/
-│   └── kubernetes/
+├── cloud-native/                # 云计算 & 云原生
+│   ├── docker/                  #   容器化基础
+│   ├── kubernetes/              #   K8s 核心与实践
+│   ├── service-mesh/            #   Istio / Envoy
+│   ├── observability/           #   可观测性（Prometheus/Grafana/Jaeger）
+│   ├── cicd/                    #   CI/CD 流水线
+│   ├── iac/                     #   基础设施即代码（Terraform/Helm/ArgoCD）
+│   └── cloud-platform/          #   云平台核心服务与内部平台实践
 │
 ├── build-tools/                 # 构建工具
 │   ├── gradle/
@@ -557,20 +571,50 @@ java_fullstack_ai_agent_study/
       <td></td>
     </tr>
     <tr>
-      <td rowspan="3"><b>🐳 容器与云原生</b></td>
-      <td>Docker（镜像构建 / 网络模型 / Volume 管理）</td>
+      <td rowspan="9"><b>☁️ 云计算 & 云原生</b></td>
+      <td>Docker（镜像构建 / 多阶段构建 / 网络模型 / Volume 管理）</td>
       <td>🔜 待开始</td>
       <td></td>
     </tr>
     <tr>
-      <td>Kubernetes（Pod / Service / Ingress / HPA / 滚动发布）</td>
+      <td>Kubernetes（Pod / Deployment / Service / Ingress / HPA / 滚动发布）</td>
       <td>🔜 待开始</td>
       <td></td>
     </tr>
     <tr>
-      <td>Crane（美团内部容器调度平台实践）</td>
+      <td>Service Mesh — Istio / Envoy（流量管理 / 熔断 / mTLS / 链路追踪）</td>
       <td>🔜 待开始</td>
       <td></td>
+    </tr>
+    <tr>
+      <td>Serverless — FaaS 原理 / 冷启动优化 / 云函数应用场景</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>云平台核心服务（计算 / 对象存储 / VPC / 托管数据库）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IaC 基础设施即代码（Terraform / Helm Chart / ArgoCD / GitOps）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>可观测性（Prometheus + Grafana / ELK / Jaeger / OpenTelemetry）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>CI/CD 流水线（Jenkins / GitHub Actions / 蓝绿 / 金丝雀发布）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>内部平台实践（Crane 容器调度 / HULK 云平台 / 云原生改造落地）</td>
+      <td>🔜 待开始</td>
+      <td>美团内部</td>
     </tr>
     <tr>
       <td rowspan="3"><b>🔧 构建与工程化</b></td>
@@ -814,6 +858,7 @@ java_fullstack_ai_agent_study/
 | 2026-05-23 | v0.7.0 | 补充数据分析（指标/埋点/A/B实验/分析方法/工具）|
 | 2026-05-23 | v0.8.0 | 重构项目定位说明、关联项目分工表、学习进度（按主子模块层级展示）|
 | 2026-05-23 | v0.9.0 | 更新项目标题；学习进度改为带 rowspan 合并单元格的单张 HTML 大表格 |
+| 2026-05-24 | v1.0.0 | 新增「云计算 & 云原生」完整方向（容器/K8s/ServiceMesh/Serverless/可观测性/IaC/CI/CD）|
 
 ---
 
