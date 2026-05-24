@@ -300,7 +300,7 @@
 ```
 java_fullstack_ai_agent_study/
 ├── README.md                    # 项目总览（当前文件）
-├── meituan-work-space(MWS).md   # 美团内部技术平台组件索引（MWS）
+├── meituan_work_space(MWS).md   # 美团内部技术平台组件索引（MWS）
 │
 ├── spring/                      # Spring 全家桶实践
 │   ├── spring-core/             #   IoC / AOP 实验
