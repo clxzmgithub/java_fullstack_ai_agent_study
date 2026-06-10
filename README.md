@@ -1,4 +1,4 @@
-# 📚 Java 后端 & 全栈 & AI & Agent 应用开发学习项目
+# 📚 Java 后端 & 全栈 & AI 应用接入 工程实践项目
 
 <div align="center">
 
@@ -13,10 +13,10 @@
 
 ## 📌 项目定位
 
-本项目是一个面向**工程实践**的系统性学习仓库，**不是真实的生产项目**。聚焦于 Java 全栈工程化体系的深度实践，横跨后端架构、分布式系统、大数据生态、数据分析、风控与爬虫、前端、多语言拓展、AI/Agent 应用开发等方向，以动手实验、场景设计、面试题解析为主要学习载体，逐步构建完整的全栈工程师知识体系。
+本项目是一个面向**工程实践**的系统性学习仓库，**不是真实的生产项目**。聚焦于 Java 全栈工程化体系的深度实践，横跨后端架构、分布式系统、大数据生态、数据分析、风控与爬虫、前端、多语言拓展、AI/Agent **系统接入与工程落地**等方向，以动手实验、场景设计、面试题解析为主要学习载体，逐步构建完整的全栈工程师知识体系。
 
-**核心学习方向（17 大板块）：**
-`Spring 全家桶` · `数据库与存储` · `消息队列` · `分布式系统` · `架构设计` · `系统设计与面试题` · `稳定性保障` · `网络与通信` · `认证授权与安全` · `云计算 & 云原生` · `大数据生态` · `数据分析` · `爬虫·逆向·反爬·风控` · `多语言拓展 + 前端` · `AI 算法理论 + AI/Agent 开发` · `构建与工程化` · `业务架构与产品思维`
+**核心学习方向（20 大板块）：**
+`Spring 全家桶` · `数据库与存储` · `消息队列` · `分布式系统` · `架构设计` · `系统设计与面试题` · `稳定性保障` · `网络与通信` · `认证授权与安全` · `云计算 & 云原生` · `大数据生态` · `数据分析` · `爬虫·逆向·反爬·风控` · `多语言拓展 + 前端` · `AI/Agent 应用接入（做系统）` · `构建与工程化` · `业务架构与产品思维` · **`测试工程`**
 
 > ⚠️ **关联项目分工说明**
 >
@@ -24,9 +24,24 @@
 >
 > | 项目 | 定位 | 核心聚焦 |
 > |------|:----:|---------|
-> | [`java_study`](../java_study) | 🔵 基础理论 | Java 语言核心、数据结构与算法、JVM 原理、操作系统、计算机网络——**打地基** |
-> | **本项目**（`java_fullstack_ai_agent_study`） | 🟠 工程实践 | Spring 生态、分布式架构、大数据、存储中间件、风控爬虫、数据分析、多语言、AI/Agent——**做系统** |
-> | [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study) | 🟣 AI 工程 | AI 编程方法论、上下文工程、Harness 理论、AI Coding 工具链、大模型与 Agent 开发——**用 AI 提效** |
+> | [`java_study`](../java_study) | 🔵 基础理论 | Java 语言核心、并发深度、JVM 原理、IO/NIO 体系、数据结构与算法、设计模式、计算机基础理论、信息安全基础、软件工程基础、性能工程、调试排查、前沿技术趋势——**打地基** |
+> | **本项目**（`java_fullstack_ai_agent_study`） | 🟠 工程实践 | Spring 生态、分布式架构、大数据、存储中间件、风控爬虫、数据分析、多语言、AI/Agent 系统接入、测试工程——**做系统** |
+> | [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study) | 🟣 AI 工程 | AI 编程方法论、上下文工程、AI 工具工程化、Harness 理论、AI Coding 工具链、大模型与 Agent 开发知识——**用 AI 提效** |
+
+> 📐 **AI/Agent 在两个项目中的分工边界**
+>
+> | 关注点 | 本项目（做系统）| `ai_coding_harness_engineering_study`（用 AI 提效）|
+> |--------|:-------------:|:-----------------------------------------------:|
+> | Spring AI 接入、模型 API 调用 | ✅ | — |
+> | RAG 系统工程化（向量数据库集成/检索服务）| ✅ | — |
+> | Function Calling 封装与业务对接 | ✅ | — |
+> | 模型调用稳定性（超时/熔断/限流/成本）| ✅ | — |
+> | AI 算法原理（Transformer/RLHF/MoE）| — | ✅ |
+> | Agent 编排框架（LangGraph/AutoGen/CrewAI）| — | ✅ |
+> | Agent SDK 对比与设计哲学 | — | ✅ |
+> | MCP 协议原理与扩展开发 | — | ✅ |
+> | Harness/Eval 框架（LLM-as-Judge）| — | ✅ |
+> | AI Coding 工具使用（Claude Code/Cursor）| — | ✅ |
 
 ---
 
@@ -56,10 +71,10 @@
 | 14 | 💼 **业务架构与产品思维** | 🟡 按需 | 架构设计 | 能用 Event Storming 划分服务边界，理解电商/O2O 业务模型，能从技术视角评估商业可行性 | 各业务公共服务（POI/用户/支付）|
 | 15 | 🕷️ **爬虫、逆向与反爬** | 🟡 按需 | Python / 网络基础 | 能独立开发分布式爬虫，掌握 JS/App 逆向基础，能设计多层反爬系统 | 安全类工具导航 |
 | 16 | 🔰 **风控系统** | 🟡 按需 | 分布式 + 大数据 | 能设计实时风控架构（规则+模型融合），理解设备指纹与图谱风控，掌握风控度量体系 | 安全类工具导航 |
-| 17 | 🤖 **AI 与 Agent 应用开发** | 🟠 重要 | Python + Spring | 能用 LangChain/Spring AI 构建 RAG 应用，理解 Agent 工作流，能封装 Function Calling | MLP / Turing / Horus |
-| 18 | 🧠 **AI 算法理论** | 🔵 了解 | 数学基础 | 理解 Transformer/大模型原理，能读懂机器学习论文，为使用 AI 工具提供理论支撑 | MLX / 图灵平台 |
-| 19 | 🌍 **多语言拓展** | 🔵 了解 | 各语言入门 | Go/Python/Node.js 达到可做实际项目水平，Shell 能写自动化脚本，C/汇编了解即可 | — |
-| 20 | 🖥️ **前端技术** | 🔵 了解 | JavaScript 基础 | 能独立实现 React/Vue3 业务页面，理解前后端联调与 API 设计，具备全栈开发能力 | 前端类工具导航 |
+| 17 | 🤖 **AI/Agent 应用接入** | 🟠 重要 | Spring + 数据库 | 能用 Spring AI 构建可运行的 RAG 应用，封装 Function Calling 业务接口，能解决生产级稳定性问题（超时/熔断/成本控制）| MLP / Turing / Horus |
+| 18 | 🌍 **多语言拓展** | 🔵 了解 | 各语言入门 | Go/Python/Node.js 达到可做实际项目水平，Shell 能写自动化脚本，C/汇编了解即可 | — |
+| 19 | 🖥️ **前端技术** | 🔵 了解 | JavaScript 基础 | 能独立实现 React/Vue3 业务页面，理解前后端联调与 API 设计，具备全栈开发能力 | 前端类工具导航 |
+| 20 | 🧪 **测试工程** | 🟡 按需 | Spring 全家桶 + 分布式 | 能编写高质量单元/集成测试，掌握压力测试和性能测试方法论，建立完整的测试分层体系 | 测试平台（研发运维工具）|
 
 > 📌 **推荐学习主线**（适合后端工程师）：`1 Spring` → `2 数据库` → `3 消息队列` → `4 分布式` → `5 稳定性` → `8 架构设计` → `10 系统设计面试` → 根据方向选择其余板块
 
@@ -210,19 +225,6 @@
 | 数据仓库 | 分层架构（ODS/DWD/DWS/ADS）/ 数据建模（星形/雪花模型）|
 | 数据治理 | 元数据管理 / 数据血缘 / 数据质量 / Apache Atlas |
 
-### 🧠 AI 算法理论
-
-> 💡 机器学习、深度学习是当下 AI 浪潮的核心基础，即便不从事算法岗位，理解其原理有助于更好地使用和评估 AI 能力，是工程师认知升级的重要拼图。
-
-| 方向 | 学习要点 |
-|------|---------|
-| 机器学习基础 | 监督 / 无监督 / 强化学习 / 特征工程 / 模型评估（偏差-方差）|
-| 神经网络 | 前向传播 / 反向传播 / 激活函数 / 损失函数 / 梯度下降 |
-| 深度学习 | CNN / RNN / LSTM / Attention 机制 / Transformer 架构 |
-| 大模型原理 | Pre-training / SFT / RLHF / Scaling Law / MoE 架构 |
-| AI 框架 | PyTorch / TensorFlow / HuggingFace Transformers / ModelScope |
-| 大模型生态 | OpenAI API / Claude / Gemini / Qwen / LLaMA / DeepSeek |
-
 ### 🎯 面试题与真实场景设计
 
 > 💡 结合真实互联网场景，将技术知识融入实战，是查漏补缺、深化理解的最佳路径。
@@ -330,13 +332,45 @@
 | 分析平台 | 实时 OLAP（Doris/ClickHouse）/ 役角分析（分析师 vs 开发）|
 | 增长分析框架 | AARRR 模型 / HEART 框架 / 北极星指标 / 第一核心行动 |
 
-### 🤖 AI 与 Agent 应用开发
+### 🤖 AI/Agent 应用接入（做系统）
+
+> 💡 **本章聚焦「做系统」**——目标是交付可运行的 AI 业务代码。算法原理、Agent SDK 对比、AI 工具使用方法论等内容见 [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study)。
+
+#### 🔌 大模型 API 接入与封装
 | 方向 | 学习要点 |
 |------|---------|
-| 大模型应用 | Prompt 工程 / RAG 检索增强生成 / Fine-tuning 基础 |
-| Agent 框架 | LangChain / LangGraph / AutoGen / ReAct 模式 |
-| AI 工程化 | 向量数据库（Milvus/Chroma）/ 模型部署 / 推理优化 |
-| Java AI 集成 | Spring AI / 模型调用封装 / Function Calling |
+| Spring AI 框架 | ChatClient / ChatModel / Advisors / EmbeddingModel / ImageModel |
+| 模型 API 对接 | OpenAI / Anthropic Claude / 国内模型（DeepSeek / 通义 / 文心）接入 |
+| Prompt 管理 | PromptTemplate / SystemMessage / 多轮对话构建 |
+| 流式响应处理 | Streaming API / SSE 推送 / 前端实时渲染集成 |
+| 多模型路由 | 模型能力分级 / 按场景路由 / 降级备用模型策略 |
+
+#### 📚 RAG 系统工程化
+| 方向 | 学习要点 |
+|------|---------|
+| 向量数据库集成 | Milvus / Chroma / PgVector / Redis Vector 接入与 Spring AI 集成 |
+| 文档处理管线 | 文档解析（PDF/Word/HTML）/ Chunking 策略 / Embedding 批处理 |
+| 检索服务构建 | 向量检索 / 关键词检索 / 混合检索接口封装 |
+| RAG 应用实战 | 企业知识库问答 / 文档智能搜索 / 代码库检索 |
+| 数据更新策略 | 增量索引 / 版本管理 / 文档失效处理 |
+
+#### ⚙️ Function Calling 与 Agent 工具封装
+| 方向 | 学习要点 |
+|------|---------|
+| Function Calling 原理 | 工具定义规范（JSON Schema）/ 工具调用循环机制 |
+| Spring AI Function | `@Bean` 注册工具 / FunctionCallback 接口 / 自动发现机制 |
+| 业务工具封装 | 数据库查询工具 / HTTP 外部 API 工具 / 内部微服务工具 |
+| 工具调用安全 | 参数校验 / 权限控制 / 调用结果脱敏 |
+| MCP 服务端开发 | 用 Java/Spring 实现 MCP Server，暴露内部能力给 AI 工具 |
+
+#### 🛡️ 生产级稳定性保障
+| 方向 | 学习要点 |
+|------|---------|
+| 超时与熔断 | 模型调用超时设置 / Resilience4j 熔断 / 快速失败策略 |
+| 重试策略 | 指数退避重试 / 幂等重试设计 / 最大重试次数控制 |
+| 成本控制 | Token 用量统计 / 请求限频（Rate Limit）/ 缓存重复请求 |
+| 异步化处理 | 长时推理异步化 / 任务队列（Kafka/MQ）/ 结果回调通知 |
+| 可观测性 | 模型调用链路追踪 / Token 用量监控看板 / 异常率告警 |
 
 ---
 
@@ -346,7 +380,7 @@
 
 ### 🏢 美团工具服务导航 — 理论到生产的映射
 
-> 📌 **这部分是什么？** 上面 20 个板块学的都是"通用技术"，而 `美团工具服务导航/` 目录记录的是**这些技术在美团生产环境中的具体落地形态**。每学完一个技术板块，可以对照下表找到美团对应的内部系统，加深理解"真实系统是怎么做的"。
+> 📌 **这部分是什么？** 上面 19 个板块学的都是"通用技术"，而 `美团工具服务导航/` 目录记录的是**这些技术在美团生产环境中的具体落地形态**。每学完一个技术板块，可以对照下表找到美团对应的内部系统，加深理解"真实系统是怎么做的"。
 
 | 通用技术 | 美团内部对应工具 | 所在文件 |
 |---------|---------------|---------|
@@ -372,6 +406,7 @@
 | IM / 消息推送 / SMS | IM 即时通讯、Hedwig、SMS、TTS | 通讯类.md |
 | 设计协作 / UI 规范 | Ingee（印迹）、Cookie（曲奇）| 设计类.md |
 | 用户中心 / 地图 / 支付 | MTUserCenter、MAF、PayCashier | 业务公共服务.md |
+| 大模型 / AI 服务 | MLP（模型平台）、Horus（AI 中台）、Turing | 数据类.md |
 
 ```
 java_fullstack_ai_agent_study/
@@ -483,11 +518,6 @@ java_fullstack_ai_agent_study/
 │   ├── analysis-methods/        #   分析方法 / A/B实验 / 用户分群
 │   └── tools/                   #   SQL / Python / 可视化工具
 │
-├── ai-algorithm/                # AI 算法理论
-│   ├── machine-learning/        #   机器学习基础
-│   ├── deep-learning/           #   神经网络 / CNN / RNN / Transformer
-│   └── llm-theory/              #   大模型原理 / RLHF / MoE
-│
 ├── crawler-reverse/             # 爬虫、逆向与反爬
 │   ├── crawler/                 #   爬虫基础 / 分布式爬虫 / JS渲染
 │   ├── reverse/                 #   抓包分析 / JS逆向 / App逆向
@@ -500,11 +530,77 @@ java_fullstack_ai_agent_study/
 │   ├── graph-risk/              #   图谱风控 / 团伙识别
 │   └── realtime-arch/           #   实时风控架构设计
 │
-└── ai-agent/                    # AI 与 Agent 应用开发
-    ├── rag/
-    ├── langchain/
-    └── spring-ai/
+├── ai-agent/                    # AI/Agent 应用接入（做系统）
+│   ├── spring-ai/               #   Spring AI 框架实践（ChatClient / Advisors）
+│   ├── rag/                     #   RAG 系统工程化（向量库集成 / 检索管线）
+│   ├── function-calling/        #   Function Calling 封装（Spring AI Function）
+│   ├── mcp-server/              #   Java/Spring 实现 MCP Server（对外暴露能力）
+│   └── stability/               #   生产级稳定性（超时/熔断/成本控制/可观测性）
+│
+└── testing/                     # 🧪 测试工程
+    ├── unit-testing/            #   单元测试（JUnit 5 + Mockito）
+    │   ├── junit5/              #     JUnit 5 注解体系 / 断言 API / 参数化测试
+    │   └── mockito/             #     Mock / Stub / Spy / ArgumentCaptor
+    ├── integration-testing/     #   集成测试
+    │   ├── spring-boot-test/    #     @SpringBootTest / @DataJpaTest / @WebMvcTest
+    │   ├── testcontainers/      #     Testcontainers（MySQL/Redis/Kafka 真实环境）
+    │   └── wiremock/            #     WireMock HTTP 服务 Mock
+    ├── performance-testing/     #   性能测试 / 压力测试
+    │   ├── jmh/                 #     JMH 微基准测试（@Benchmark / 预热 / 测量陷阱）
+    │   ├── jmeter/              #     JMeter（线程组 / 分布式压测 / 测试计划设计）
+    │   ├── gatling/             #     Gatling（Scala DSL / 场景建模 / 压测报告）
+    │   └── k6/                  #     K6（JS 脚本压测 / 灵活场景 / 指标导出）
+    ├── api-testing/             #   API 测试（REST Assured / MockMvc）
+    ├── contract-testing/        #   契约测试（Spring Cloud Contract / Pact）
+    ├── chaos-engineering/       #   混沌工程（Chaos Monkey / 故障注入）
+    └── test-design/             #   测试用例设计（等价类 / 边界值 / TDD / BDD）
 ```
+
+---
+
+### 🧪 测试工程
+
+> 💡 **工程质量的最后一道防线**。从单元测试到压力测试，建立分层测试体系，是全栈工程师不可缺失的硬技能。AI 时代更需要可靠的测试作为 AI 生成代码的验证基础（Harness）。
+
+#### 🏗️ 测试分层体系
+| 层次 | 方向 | 学习要点 |
+|------|------|---------|
+| **单元测试** | JUnit 5 | 注解体系（`@Test` / `@ParameterizedTest` / `@BeforeEach`）/ 断言 API / 测试生命周期 |
+| **单元测试** | Mockito | `@Mock` / `@InjectMocks` / `when-thenReturn` / `verify` / `ArgumentCaptor` / Spy |
+| **集成测试** | Spring Boot Test | `@SpringBootTest` / `@DataJpaTest` / `@WebMvcTest` / `@MockBean` / TestRestTemplate |
+| **集成测试** | Testcontainers | Docker 容器化集成测试 / MySQL/Redis/Kafka 真实环境测试 / 与 JUnit 5 集成 |
+| **契约测试** | Spring Cloud Contract / Pact | 服务间接口契约验证 / 消费者驱动契约测试 |
+| **端到端测试** | Selenium / Playwright | 浏览器自动化 / 测试场景编写 / CI 集成 |
+
+#### 📐 测试用例设计方法论
+| 方法 | 学习要点 |
+|------|---------|
+| 等价类划分 | 有效等价类 / 无效等价类 / 边界值选取策略 |
+| 边界值分析 | 最小值 / 最大值 / 边界 ±1 / 特殊值（null/0/空字符串）|
+| 因果图 / 判定表 | 多条件组合 / 简化判定表方法 |
+| 场景测试法 | 主成功场景 / 扩展场景 / 异常场景 / 备选路径 |
+| TDD（测试驱动开发）| 红-绿-重构循环 / 测试先行 / 设计反馈 |
+| BDD（行为驱动开发）| Given-When-Then 格式 / Cucumber / 与业务语言对齐 |
+| 测试覆盖率 | 行覆盖 / 分支覆盖 / 条件覆盖 / JaCoCo 工具使用 |
+
+#### 🔥 性能测试
+| 方向 | 学习要点 |
+|------|---------|
+| 性能测试方法论 | 性能测试类型（基准/负载/压力/稳定性/尖峰测试）/ 性能指标（TPS/QPS/响应时间/并发数/错误率）|
+| JMH 微基准测试 | `@Benchmark` / 基准测试模式 / JVM 预热（Warmup）/ 避免死码消除 / 测量陷阱 |
+| JMeter | 测试计划设计 / 线程组 / 采样器 / 监听器 / 分布式压测 / 参数化 |
+| Gatling | 基于 Scala DSL 的高并发压测 / 场景建模 / 断言与报告 / 与 CI/CD 集成 |
+| K6 | JavaScript 脚本压测 / 灵活场景编排 / 指标导出 / 云端压测 |
+| 压测结果分析 | 性能瓶颈定位（CPU/内存/IO/锁）/ 火焰图辅助分析 / 与监控告警结合 |
+
+#### 🔌 集成测试进阶
+| 方向 | 学习要点 |
+|------|---------|
+| Testcontainers 实战 | 数据库（MySQL/PostgreSQL）/ 缓存（Redis）/ 消息队列（Kafka）/ 使用 `@Container` + `@DynamicPropertySource` |
+| WireMock | HTTP 依赖服务 Mock / Stub 录制回放 / 请求匹配策略 / 与 Spring 集成 |
+| 测试数据管理 | `@Sql` 脚本 / `@Transactional` 测试回滚 / TestDataBuilder 模式 / Fixture 工厂 |
+| API 测试 | REST Assured / `MockMvc` 链式 API / 接口自动化测试 |
+| 混沌工程 | Chaos Engineering 理念 / Chaos Monkey / 故障注入（网络延迟/节点宕机）/ 稳定性验证 |
 
 ---
 
@@ -946,44 +1042,94 @@ java_fullstack_ai_agent_study/
       <td></td>
     </tr>
     <tr>
-      <td rowspan="4"><b>🧠 AI 算法理论</b></td>
-      <td>机器学习基础（监督 / 无监督 / 强化学习 / 特征工程）</td>
+      <td rowspan="9"><b>🤖 AI/Agent 应用接入（做系统）</b></td>
+      <td>Spring AI 框架（ChatClient / Advisors / EmbeddingModel）</td>
       <td>🔜 待开始</td>
-      <td>了解为主</td>
+      <td>🔑 重点</td>
     </tr>
     <tr>
-      <td>神经网络 / 深度学习（CNN / RNN / LSTM / Transformer）</td>
-      <td>🔜 待开始</td>
-      <td>了解为主</td>
-    </tr>
-    <tr>
-      <td>大模型原理（Pre-training / SFT / RLHF / Scaling Law / MoE）</td>
-      <td>🔜 待开始</td>
-      <td>了解为主</td>
-    </tr>
-    <tr>
-      <td>AI 框架（PyTorch / TensorFlow / HuggingFace Transformers）</td>
-      <td>🔜 待开始</td>
-      <td>了解为主</td>
-    </tr>
-    <tr>
-      <td rowspan="4"><b>🤖 AI 与 Agent 应用开发</b></td>
-      <td>大模型应用（Prompt 工程 / RAG 检索增强生成 / Fine-tuning）</td>
+      <td>模型 API 对接（OpenAI / Claude / DeepSeek / 通义）</td>
       <td>🔜 待开始</td>
       <td></td>
     </tr>
     <tr>
-      <td>Agent 框架（LangChain / LangGraph / AutoGen / ReAct 模式）</td>
+      <td>Prompt 管理与流式响应处理（SSE / 前端实时集成）</td>
       <td>🔜 待开始</td>
       <td></td>
     </tr>
     <tr>
-      <td>AI 工程化（向量数据库 / 模型部署 / 推理优化）</td>
+      <td>RAG 系统工程化（向量库集成 / 文档管线 / 混合检索）</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>Function Calling 封装与业务工具对接（Spring AI Function）</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>MCP Server 开发（Java/Spring 对外暴露能力）</td>
       <td>🔜 待开始</td>
       <td></td>
     </tr>
     <tr>
-      <td>Java AI 集成（Spring AI / 模型调用封装 / Function Calling）</td>
+      <td>生产级稳定性：超时 / 熔断 / 重试设计</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>成本控制：Token 统计 / Rate Limit / 缓存重复请求</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>可观测性：模型调用链路追踪 / Token 监控看板 / 告警</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="9"><b>🧪 测试工程</b></td>
+      <td>单元测试：JUnit 5（注解体系 / 参数化测试 / 断言 API）</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>单元测试：Mockito（Mock / Stub / Spy / ArgumentCaptor）</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>集成测试：Spring Boot Test（@SpringBootTest / @DataJpaTest / @WebMvcTest）</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>集成测试：Testcontainers（MySQL/Redis/Kafka 真实环境测试）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>API 测试：REST Assured / MockMvc 链式 API / 接口自动化</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>性能测试方法论（TPS/QPS/响应时间/并发数 / 测试类型分类）</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>JMeter / Gatling / K6 压力测试工具实战（分布式压测 / 报告分析）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>JMH 微基准测试（@Benchmark / 预热 / 避免死码消除）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>测试用例设计（等价类 / 边界值 / TDD / BDD / 测试覆盖率 JaCoCo）</td>
       <td>🔜 待开始</td>
       <td></td>
     </tr>
@@ -996,9 +1142,9 @@ java_fullstack_ai_agent_study/
 
 | 项目 | 定位 | 内容 |
 |------|------|------|
-| [`java_study`](../java_study) | 基础理论 | Java 语言核心、数据结构与算法、JVM、操作系统、计算机网络 |
-| **本项目**（`java_fullstack_ai_agent_study`） | 工程实践 | Spring 生态、分布式架构、大数据生态、存储中间件、多语言、前端、AI/Agent 工程化 |
-| [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study) | AI 工程 | AI 编程、Harness 工程理论、AI Coding 工具链、大模型应用及 Agent 开发知识沉淀 |
+| [`java_study`](../java_study) | 基础理论 | Java 语言核心（含 SPI/字节码增强/序列化）、JVM 原理、IO/NIO 体系、并发深度（含虚拟线程/响应式）、数据结构与算法、设计模式与设计原则、计算机基础理论（OS/网络/原理/编译）、信息安全基础（密码学/攻防）、软件工程基础（测试/重构/CI）、数学基础、性能工程（JMH/火焰图）、调试与问题排查（Arthas/JFR）、前沿技术趋势 |
+| **本项目**（`java_fullstack_ai_agent_study`） | 工程实践 | Spring 生态、分布式架构、大数据生态、存储中间件、多语言、前端、AI/Agent 系统接入、测试工程（做系统）|
+| [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study) | AI 工程 | AI 编程方法论、上下文工程、AI 工具工程化、Harness 理论、AI Coding 工具链、大模型与 Agent 知识——用 AI 提效 |
 
 ---
 
@@ -1018,10 +1164,12 @@ java_fullstack_ai_agent_study/
 | 2026-05-24 | v1.0.0 | 新增「云计算 & 云原生」完整方向（容器/K8s/ServiceMesh/Serverless/可观测性/IaC/CI/CD）|
 | 2026-05-24 | v1.1.0 | 新增「业务架构与产品思维」方向（领域建模/事件风暴/行业认知/产品思维/AI赋能业务）|
 | 2026-05-24 | v1.2.0 | 新增「学习路线总览表」（20板块/优先级/前置依赖/学习目标/美团内部对应）；新增「开源技术→美团内部工具映射表」；完善「美团工具服务导航」定位说明 |
+| 2026-06-10 | v1.3.0 | **项目定位重构**：明确「做系统」与「用 AI 提效」的边界，删除「🧠 AI 算法理论」章节（迁移至 `ai_coding_harness_engineering_study`）；将「🤖 AI 与 Agent 应用开发」重构为「🤖 AI/Agent 应用接入（做系统）」，聚焦 Spring AI 接入、RAG 工程化、Function Calling 封装、MCP Server 开发、生产稳定性保障；新增 AI/Agent 两项目分工边界对照表；更新学习路线总览表（19 大板块）、学习进度、项目结构、关联项目说明 |
+| 2026-06-10 | v1.4.0 | **新增「🧪 测试工程」板块**：新增测试分层体系（JUnit 5 / Mockito / Spring Boot Test / Testcontainers / 契约测试 / E2E 测试）；新增测试用例设计方法论（等价类/边界值/TDD/BDD/覆盖率）；新增性能测试（JMH/JMeter/Gatling/K6/压测结果分析）；新增集成测试进阶（Testcontainers 实战/WireMock/测试数据管理/API 测试/混沌工程）；更新核心学习方向（19→20 大板块）、学习路线总览表、项目结构（`testing/` 目录）、学习进度表 |
+| 2026-06-10 | v1.5.0 | **同步关联项目描述**：更新「关联项目分工说明」表和「关联项目」章节中 `java_study` 的描述，与其 README v1.3.0 保持一致（新增 IO/NIO 体系、信息安全、软件工程、性能工程、调试排查、前沿趋势等 14 大板块完整覆盖） |
 
 ---
 
 <div align="center">
   <sub>持续更新中 🚀 · 学以致用，从实践中成长</sub>
 </div>
-
