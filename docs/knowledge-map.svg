@@ -1,11 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 2100" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Segoe UI', Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 3200" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Segoe UI', Arial, sans-serif">
   <!-- ============================================================
-       Java 全栈 & AI 接入 · 工程实践 知识体系全景大图
+       Java 全栈 & AI/Agent 应用开发 知识体系全景大图
        项目: java_fullstack_ai_agent_study
-       版本: v1.5.0  日期: 2026-06
+       版本: v2.0.0  日期: 2026-06
+       23 大板块
   ============================================================ -->
-
-  <!-- 背景渐变 -->
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#0f1623;stop-opacity:1"/>
@@ -16,11 +15,6 @@
       <stop offset="50%" style="stop-color:#fb923c"/>
       <stop offset="100%" style="stop-color:#fbbf24"/>
     </linearGradient>
-    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e3a5f"/>
-      <stop offset="100%" style="stop-color:#0f2744"/>
-    </linearGradient>
-    <!-- 卡片投影 -->
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
       <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
     </filter>
@@ -30,592 +24,675 @@
     </filter>
   </defs>
 
-  <!-- 全局背景 -->
-  <rect width="1700" height="2100" fill="url(#bgGrad)"/>
-
-  <!-- 顶部装饰条 -->
+  <rect width="1700" height="3200" fill="url(#bgGrad)"/>
   <rect x="0" y="0" width="1700" height="6" fill="url(#titleGrad)"/>
 
-  <!-- ===== 标题区 ===== -->
-  <rect x="40" y="24" width="1620" height="96" rx="12" fill="#1c2e4a" filter="url(#shadow)"/>
-  <rect x="40" y="24" width="6" height="96" rx="3" fill="url(#titleGrad)"/>
-  <text x="850" y="66" text-anchor="middle" font-size="26" font-weight="700" fill="url(#titleGrad)">☕ Java 全栈 &amp; AI 接入 · 工程实践 知识体系全景大图</text>
-  <text x="850" y="96" text-anchor="middle" font-size="14" fill="#94a3b8">java_fullstack_ai_agent_study · 20 大核心板块 · Spring生态 + 分布式 + 大数据 + AI/Agent 工程落地</text>
-  <text x="850" y="112" text-anchor="middle" font-size="12" fill="#64748b">v1.5.0 · 2026-06  |  定位: 🟠 工程实践 —— 做系统</text>
-
-  <!-- ===== 三层架构定位说明 ===== -->
-  <rect x="40" y="136" width="1620" height="52" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" filter="url(#shadow)"/>
-  <text x="850" y="155" text-anchor="middle" font-size="13" fill="#94a3b8">关联项目三层架构：</text>
-  <rect x="260" y="143" width="180" height="30" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
-  <text x="350" y="163" text-anchor="middle" font-size="12" fill="#60a5fa">🔵 java_study  打地基</text>
-  <rect x="660" y="143" width="380" height="30" rx="6" fill="#3d2500" stroke="#f97316" stroke-width="2"/>
-  <text x="850" y="163" text-anchor="middle" font-size="12" font-weight="700" fill="#fb923c">🟠 本项目 java_fullstack_ai_agent_study  做系统 ←</text>
-  <rect x="1260" y="143" width="220" height="30" rx="6" fill="#2d1b5e" stroke="#8b5cf6" stroke-width="1"/>
-  <text x="1370" y="163" text-anchor="middle" font-size="12" fill="#a78bfa">🟣 ai_coding_harness  用AI提效</text>
-
-  <!-- ===== 学习主线 ===== -->
-  <rect x="40" y="204" width="1620" height="44" rx="8" fill="#292524" stroke="#78716c" stroke-width="1"/>
-  <text x="70" y="221" font-size="13" font-weight="700" fill="#fb923c">📍 推荐学习主线</text>
-  <text x="70" y="238" font-size="12" fill="#a8a29e">Spring全家桶(1) → 数据库存储(2) → 消息队列(3) → 分布式系统(4) → 稳定性保障(5) → 架构设计(8) → 系统设计面试(10) → 选方向深耕</text>
-
-  <!-- ===== 优先级图例 ===== -->
-  <rect x="40" y="262" width="1620" height="36" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-  <circle cx="70" cy="280" r="7" fill="#ef4444"/>
-  <text x="82" y="284" font-size="12" fill="#ef4444">核心必学</text>
-  <circle cx="190" cy="280" r="7" fill="#f97316"/>
-  <text x="202" y="284" font-size="12" fill="#f97316">重要补充</text>
-  <circle cx="310" cy="280" r="7" fill="#eab308"/>
-  <text x="322" y="284" font-size="12" fill="#eab308">按需拓展</text>
-  <circle cx="430" cy="280" r="7" fill="#3b82f6"/>
-  <text x="442" y="284" font-size="12" fill="#3b82f6">了解即可</text>
-  <text x="600" y="284" font-size="12" fill="#64748b">| 美团对应：MDP框架 / Pigeon RPC / OCTO注册中心 / Mafka消息 / Zebra数据库 / HULK云原生 / Raptor监控 / Turing AI</text>
-
-  <!-- ================================================================
-       主体内容区：20 大板块，分列布局
-       列1: x=40  列2: x=460  列3: x=880  列4: x=1300
-       行高约 260px，从 y=314 开始
-  ================================================================ -->
-
-  <!-- ~~~~~~~~~~~~~~~~~ 行1: 4个核心板块 ~~~~~~~~~~~~~~~~~ -->
-
-  <!-- 板块1: Spring全家桶 (🔴核心) -->
-  <rect x="40" y="314" width="400" height="256" rx="10" fill="#0f2744" stroke="#1d4ed8" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="314" width="400" height="36" rx="10" fill="#1d4ed8"/>
-  <rect x="40" y="336" width="400" height="14" fill="#1d4ed8"/>
-  <circle cx="66" cy="332" r="8" fill="#ef4444"/>
-  <text x="80" y="336" font-size="13" font-weight="700" fill="white">1. 🧩 Spring 全家桶</text>
-  <text x="380" y="336" font-size="11" fill="#bfdbfe">核心必学</text>
-
-  <text x="56" y="370" font-size="11" font-weight="700" fill="#93c5fd">框架核心</text>
-  <text x="56" y="388" font-size="11" fill="#cbd5e1">Spring Framework: IoC/AOP/事件/Bean生命周期</text>
-  <text x="56" y="404" font-size="11" fill="#cbd5e1">Spring Boot: 自动装配/Starter开发/配置体系</text>
-  <text x="56" y="420" font-size="11" fill="#cbd5e1">Spring MVC: 请求链/过滤器/拦截器</text>
-  <text x="56" y="436" font-size="11" fill="#cbd5e1">Spring Cloud: Nacos/Gateway/OpenFeign/Sleuth</text>
-  <text x="56" y="452" font-size="11" fill="#cbd5e1">Spring Security: 认证/RBAC/OAuth2</text>
-  <text x="56" y="468" font-size="11" fill="#cbd5e1">Spring Data: JPA/Redis/ES集成</text>
-
-  <text x="56" y="488" font-size="11" font-weight="700" fill="#93c5fd">源码精读</text>
-  <text x="56" y="504" font-size="11" fill="#94a3b8">refresh() → BeanDefinition → doCreateBean</text>
-  <text x="56" y="520" font-size="11" fill="#94a3b8">AOP代理链 · 事务传播 · @Async原理</text>
-  <text x="56" y="540" font-size="11" fill="#475569">美团：MDP / XFrame 开发框架</text>
-
-  <!-- 板块2: 数据库与存储 (🔴核心) -->
-  <rect x="460" y="314" width="400" height="256" rx="10" fill="#0f2d1e" stroke="#15803d" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="460" y="314" width="400" height="36" rx="10" fill="#15803d"/>
-  <rect x="460" y="336" width="400" height="14" fill="#15803d"/>
-  <circle cx="486" cy="332" r="8" fill="#ef4444"/>
-  <text x="500" y="336" font-size="13" font-weight="700" fill="white">2. 🗄️ 数据库与存储</text>
-  <text x="800" y="336" font-size="11" fill="#bbf7d0">核心必学</text>
-
-  <text x="476" y="370" font-size="11" font-weight="700" fill="#86efac">关系型数据库</text>
-  <text x="476" y="388" font-size="11" fill="#cbd5e1">MySQL: 索引优化/执行计划/锁机制/MVCC</text>
-  <text x="476" y="404" font-size="11" fill="#cbd5e1">分库分表: ShardingSphere/水平垂直拆分</text>
-  <text x="476" y="420" font-size="11" fill="#cbd5e1">MyBatis: 动态SQL/插件/一级二级缓存</text>
-
-  <text x="476" y="440" font-size="11" font-weight="700" fill="#86efac">缓存与NoSQL</text>
-  <text x="476" y="458" font-size="11" fill="#cbd5e1">Redis: 数据结构/持久化/集群/缓存方案</text>
-  <text x="476" y="474" font-size="11" fill="#cbd5e1">Elasticsearch: 倒排索引/DSL/聚合/调优</text>
-  <text x="476" y="490" font-size="11" fill="#cbd5e1">MongoDB/HBase/Cassandra场景选型</text>
-
-  <text x="476" y="510" font-size="11" font-weight="700" fill="#86efac">存储进阶</text>
-  <text x="476" y="526" font-size="11" fill="#cbd5e1">读写分离/冷热数据分离/存储成本优化</text>
-  <text x="476" y="546" font-size="11" fill="#475569">美团：Zebra / Squirrel / Cellar / S3Plus</text>
-
-  <!-- 板块3: 消息队列 (🔴核心) -->
-  <rect x="880" y="314" width="400" height="256" rx="10" fill="#2d1b00" stroke="#c2410c" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="880" y="314" width="400" height="36" rx="10" fill="#c2410c"/>
-  <rect x="880" y="336" width="400" height="14" fill="#c2410c"/>
-  <circle cx="906" cy="332" r="8" fill="#ef4444"/>
-  <text x="920" y="336" font-size="13" font-weight="700" fill="white">3. 📨 消息队列</text>
-  <text x="1220" y="336" font-size="11" fill="#fed7aa">核心必学</text>
-
-  <text x="896" y="370" font-size="11" font-weight="700" fill="#fdba74">Kafka 深度</text>
-  <text x="896" y="388" font-size="11" fill="#cbd5e1">分区设计/副本机制/ISR/HW</text>
-  <text x="896" y="404" font-size="11" fill="#cbd5e1">幂等事务消息/ExactlyOnce语义</text>
-  <text x="896" y="420" font-size="11" fill="#cbd5e1">消费者组/Rebalance/消息积压处理</text>
-  <text x="896" y="436" font-size="11" fill="#cbd5e1">Kafka Streams/KSQL流处理</text>
-
-  <text x="896" y="456" font-size="11" font-weight="700" fill="#fdba74">RocketMQ / 对比</text>
-  <text x="896" y="474" font-size="11" fill="#cbd5e1">延迟消息/顺序消息/死信队列</text>
-  <text x="896" y="490" font-size="11" fill="#cbd5e1">RabbitMQ路由/扇形交换机</text>
-
-  <text x="896" y="510" font-size="11" font-weight="700" fill="#fdba74">消息设计模式</text>
-  <text x="896" y="528" font-size="11" fill="#cbd5e1">异步解耦/流量削峰/最终一致性</text>
-  <text x="896" y="546" font-size="11" fill="#475569">美团：Mafka（美团Kafka方言版）</text>
-
-  <!-- 板块4: 分布式系统 (🔴核心) -->
-  <rect x="1300" y="314" width="360" height="256" rx="10" fill="#1a0d2e" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1300" y="314" width="360" height="36" rx="10" fill="#7c3aed"/>
-  <rect x="1300" y="336" width="360" height="14" fill="#7c3aed"/>
-  <circle cx="1326" cy="332" r="8" fill="#ef4444"/>
-  <text x="1340" y="336" font-size="13" font-weight="700" fill="white">4. ⚙️ 分布式系统</text>
-  <text x="1610" y="336" font-size="11" fill="#ddd6fe">核心</text>
-
-  <text x="1316" y="370" font-size="11" font-weight="700" fill="#c4b5fd">理论基础</text>
-  <text x="1316" y="388" font-size="11" fill="#cbd5e1">CAP/BASE理论 · Raft/Paxos共识</text>
-  <text x="1316" y="404" font-size="11" fill="#cbd5e1">一致性哈希/向量时钟</text>
-
-  <text x="1316" y="424" font-size="11" font-weight="700" fill="#c4b5fd">分布式事务</text>
-  <text x="1316" y="442" font-size="11" fill="#cbd5e1">2PC/3PC · TCC · Saga模式</text>
-  <text x="1316" y="458" font-size="11" fill="#cbd5e1">本地消息表/事务消息</text>
-
-  <text x="1316" y="478" font-size="11" font-weight="700" fill="#c4b5fd">分布式组件</text>
-  <text x="1316" y="496" font-size="11" fill="#cbd5e1">分布式锁(Redis/ZK) · 幂等设计</text>
-  <text x="1316" y="512" font-size="11" fill="#cbd5e1">服务注册发现/配置中心</text>
-  <text x="1316" y="528" font-size="11" fill="#cbd5e1">分布式ID/雪花算法</text>
-  <text x="1316" y="546" font-size="11" fill="#475569">美团：OCTO / Cerberus / Lion</text>
-
-  <!-- ~~~~~~~~~~~~~~~~~ 行2: 4个板块 ~~~~~~~~~~~~~~~~~ -->
-
-  <!-- 板块5: 稳定性保障 (🔴核心) -->
-  <rect x="40" y="586" width="400" height="244" rx="10" fill="#1f0a0a" stroke="#b91c1c" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="586" width="400" height="36" rx="10" fill="#b91c1c"/>
-  <rect x="40" y="608" width="400" height="14" fill="#b91c1c"/>
-  <circle cx="66" cy="604" r="8" fill="#ef4444"/>
-  <text x="80" y="608" font-size="13" font-weight="700" fill="white">5. 🛡️ 稳定性保障</text>
-  <text x="384" y="608" font-size="11" fill="#fecaca">核心必学</text>
-
-  <text x="56" y="642" font-size="11" font-weight="700" fill="#fca5a5">流量防护</text>
-  <text x="56" y="660" font-size="11" fill="#cbd5e1">限流: 令牌桶/漏桶/滑动窗口</text>
-  <text x="56" y="676" font-size="11" fill="#cbd5e1">熔断: 断路器模式/状态机</text>
-  <text x="56" y="692" font-size="11" fill="#cbd5e1">降级: 服务降级策略/兜底方案</text>
-  <text x="56" y="708" font-size="11" fill="#cbd5e1">Sentinel / Resilience4j 实践</text>
-
-  <text x="56" y="728" font-size="11" font-weight="700" fill="#fca5a5">高可用设计</text>
-  <text x="56" y="746" font-size="11" fill="#cbd5e1">幂等性保障/接口设计</text>
-  <text x="56" y="762" font-size="11" fill="#cbd5e1">多副本/异地多活/故障转移</text>
-  <text x="56" y="778" font-size="11" fill="#cbd5e1">灰度发布/蓝绿部署/流量染色</text>
-  <text x="56" y="794" font-size="11" fill="#cbd5e1">故障演练/混沌工程</text>
-  <text x="56" y="814" font-size="11" fill="#475569">美团：Sentinel / 故障演练平台</text>
-
-  <!-- 板块6: 网络与通信 (🟠重要) -->
-  <rect x="460" y="586" width="400" height="244" rx="10" fill="#0c1a2e" stroke="#0891b2" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="460" y="586" width="400" height="36" rx="10" fill="#0891b2"/>
-  <rect x="460" y="608" width="400" height="14" fill="#0891b2"/>
-  <circle cx="486" cy="604" r="8" fill="#f97316"/>
-  <text x="500" y="608" font-size="13" font-weight="700" fill="white">6. 🌐 网络与通信</text>
-  <text x="800" y="608" font-size="11" fill="#bae6fd">重要</text>
-
-  <text x="476" y="642" font-size="11" font-weight="700" fill="#7dd3fc">RPC 框架</text>
-  <text x="476" y="660" font-size="11" fill="#cbd5e1">Dubbo: 服务导出/引入/调用链路</text>
-  <text x="476" y="676" font-size="11" fill="#cbd5e1">gRPC: Protobuf/流式调用/拦截器</text>
-  <text x="476" y="692" font-size="11" fill="#cbd5e1">Thrift: IDL定义/编解码/服务端</text>
-
-  <text x="476" y="712" font-size="11" font-weight="700" fill="#7dd3fc">Netty 深度</text>
-  <text x="476" y="730" font-size="11" fill="#cbd5e1">EventLoop/Channel/Pipeline架构</text>
-  <text x="476" y="746" font-size="11" fill="#cbd5e1">编解码器/自定义协议设计</text>
-  <text x="476" y="762" font-size="11" fill="#cbd5e1">零拷贝/内存池/性能调优</text>
-
-  <text x="476" y="782" font-size="11" font-weight="700" fill="#7dd3fc">协议进阶</text>
-  <text x="476" y="800" font-size="11" fill="#cbd5e1">HTTP/2多路复用 · WebSocket</text>
-  <text x="476" y="816" font-size="11" fill="#475569">美团：Pigeon / OCTO / Shark</text>
-
-  <!-- 板块7: 认证授权与安全 (🟠重要) -->
-  <rect x="880" y="586" width="400" height="244" rx="10" fill="#1a2011" stroke="#4d7c0f" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="880" y="586" width="400" height="36" rx="10" fill="#4d7c0f"/>
-  <rect x="880" y="608" width="400" height="14" fill="#4d7c0f"/>
-  <circle cx="906" cy="604" r="8" fill="#f97316"/>
-  <text x="920" y="608" font-size="13" font-weight="700" fill="white">7. 🔐 认证授权与安全</text>
-  <text x="1224" y="608" font-size="11" fill="#d9f99d">重要</text>
-
-  <text x="896" y="642" font-size="11" font-weight="700" fill="#a3e635">认证体系</text>
-  <text x="896" y="660" font-size="11" fill="#cbd5e1">JWT: 签发/验证/刷新/黑名单</text>
-  <text x="896" y="676" font-size="11" fill="#cbd5e1">OAuth2: 四种授权流程/资源服务器</text>
-  <text x="896" y="692" font-size="11" fill="#cbd5e1">SSO: 单点登录/Token交换/会话管理</text>
-
-  <text x="896" y="712" font-size="11" font-weight="700" fill="#a3e635">权限模型</text>
-  <text x="896" y="730" font-size="11" fill="#cbd5e1">RBAC/ABAC 模型设计与实现</text>
-  <text x="896" y="746" font-size="11" fill="#cbd5e1">数据权限/行列级权限过滤</text>
-
-  <text x="896" y="766" font-size="11" font-weight="700" fill="#a3e635">安全攻防</text>
-  <text x="896" y="784" font-size="11" fill="#cbd5e1">XSS/CSRF/SQL注入/SSRF防御</text>
-  <text x="896" y="800" font-size="11" fill="#cbd5e1">加密体系: AES/RSA/数字签名</text>
-  <text x="896" y="816" font-size="11" fill="#475569">美团：SSO / ePassport / 安全网关</text>
-
-  <!-- 板块8: 架构设计 (🟠重要) -->
-  <rect x="1300" y="586" width="360" height="244" rx="10" fill="#1a1506" stroke="#a16207" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1300" y="586" width="360" height="36" rx="10" fill="#a16207"/>
-  <rect x="1300" y="608" width="360" height="14" fill="#a16207"/>
-  <circle cx="1326" cy="604" r="8" fill="#f97316"/>
-  <text x="1340" y="608" font-size="13" font-weight="700" fill="white">8. 🏗️ 架构设计</text>
-  <text x="1600" y="608" font-size="11" fill="#fef08a">重要</text>
-
-  <text x="1316" y="642" font-size="11" font-weight="700" fill="#fde047">架构方法论</text>
-  <text x="1316" y="660" font-size="11" fill="#cbd5e1">DDD领域驱动设计/Event Storming</text>
-  <text x="1316" y="676" font-size="11" fill="#cbd5e1">六边形架构/洋葱架构/CQRS</text>
-  <text x="1316" y="692" font-size="11" fill="#cbd5e1">微服务 vs 单体 vs SOA 选型</text>
-
-  <text x="1316" y="712" font-size="11" font-weight="700" fill="#fde047">三高设计</text>
-  <text x="1316" y="730" font-size="11" fill="#cbd5e1">高性能: 性能瓶颈定位/异步化</text>
-  <text x="1316" y="746" font-size="11" fill="#cbd5e1">高可用: SLA/SLO/故障分级</text>
-  <text x="1316" y="762" font-size="11" fill="#cbd5e1">高扩展: 分层解耦/插件化设计</text>
-  <text x="1316" y="782" font-size="11" fill="#cbd5e1">容量规划: 容量估算模型</text>
-  <text x="1316" y="802" font-size="11" fill="#475569">美团：架构评审委员会体系</text>
-
-  <!-- ~~~~~~~~~~~~~~~~~ 行3: 4个板块 ~~~~~~~~~~~~~~~~~ -->
-
-  <!-- 板块9: 云计算&云原生 (🟠重要) -->
-  <rect x="40" y="846" width="400" height="244" rx="10" fill="#0a1a2e" stroke="#1e40af" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="846" width="400" height="36" rx="10" fill="#1e40af"/>
-  <rect x="40" y="868" width="400" height="14" fill="#1e40af"/>
-  <circle cx="66" cy="864" r="8" fill="#f97316"/>
-  <text x="80" y="868" font-size="13" font-weight="700" fill="white">9. ☁️ 云计算 &amp; 云原生</text>
-  <text x="384" y="868" font-size="11" fill="#bfdbfe">重要</text>
-
-  <text x="56" y="902" font-size="11" font-weight="700" fill="#93c5fd">容器化</text>
-  <text x="56" y="920" font-size="11" fill="#cbd5e1">Docker: 镜像构建/网络/存储</text>
-  <text x="56" y="936" font-size="11" fill="#cbd5e1">Kubernetes: Pod/Service/Deployment</text>
-  <text x="56" y="952" font-size="11" fill="#cbd5e1">Helm/Kustomize 配置管理</text>
-
-  <text x="56" y="972" font-size="11" font-weight="700" fill="#93c5fd">可观测性</text>
-  <text x="56" y="990" font-size="11" fill="#cbd5e1">监控: Prometheus/Grafana/指标体系</text>
-  <text x="56" y="1006" font-size="11" fill="#cbd5e1">日志: ELK/结构化日志/日志聚合</text>
-  <text x="56" y="1022" font-size="11" fill="#cbd5e1">链路追踪: SkyWalking/Jaeger/Zipkin</text>
-
-  <text x="56" y="1042" font-size="11" font-weight="700" fill="#93c5fd">CI/CD</text>
-  <text x="56" y="1060" font-size="11" fill="#cbd5e1">Jenkins/GitLab CI/GitHub Actions</text>
-  <text x="56" y="1076" font-size="11" fill="#475569">美团：HULK / Crane / MCD / Raptor</text>
-
-  <!-- 板块10: 系统设计与面试 (🟠重要) -->
-  <rect x="460" y="846" width="400" height="244" rx="10" fill="#1a0f2e" stroke="#6d28d9" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="460" y="846" width="400" height="36" rx="10" fill="#6d28d9"/>
-  <rect x="460" y="868" width="400" height="14" fill="#6d28d9"/>
-  <circle cx="486" cy="864" r="8" fill="#f97316"/>
-  <text x="500" y="868" font-size="13" font-weight="700" fill="white">10. 🎯 系统设计与面试题</text>
-  <text x="802" y="868" font-size="11" fill="#ddd6fe">重要</text>
-
-  <text x="476" y="902" font-size="11" font-weight="700" fill="#c4b5fd">经典系统设计</text>
-  <text x="476" y="920" font-size="11" fill="#cbd5e1">短链系统: 哈希/数据库/缓存策略</text>
-  <text x="476" y="936" font-size="11" fill="#cbd5e1">秒杀系统: 预减库存/异步下单/防超卖</text>
-  <text x="476" y="952" font-size="11" fill="#cbd5e1">Feed流: 推拉结合/Timeline设计</text>
-  <text x="476" y="968" font-size="11" fill="#cbd5e1">推送系统: 长连接/APNs/FCM</text>
-
-  <text x="476" y="988" font-size="11" font-weight="700" fill="#c4b5fd">估算与方法</text>
-  <text x="476" y="1006" font-size="11" fill="#cbd5e1">容量估算: QPS/存储/带宽计算</text>
-  <text x="476" y="1022" font-size="11" fill="#cbd5e1">面试框架: STAR/功能→规模→深化</text>
-
-  <text x="476" y="1042" font-size="11" font-weight="700" fill="#c4b5fd">热门题库</text>
-  <text x="476" y="1060" font-size="11" fill="#cbd5e1">设计Twitter/YouTube/Uber/微信</text>
-  <text x="476" y="1076" font-size="11" fill="#94a3b8">全面覆盖大厂技术面试考点</text>
-
-  <!-- 板块11: 构建与工程化 (🟡按需) -->
-  <rect x="880" y="846" width="400" height="244" rx="10" fill="#101a10" stroke="#166534" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="880" y="846" width="400" height="36" rx="10" fill="#166534"/>
-  <rect x="880" y="868" width="400" height="14" fill="#166534"/>
-  <circle cx="906" cy="864" r="8" fill="#eab308"/>
-  <text x="920" y="868" font-size="13" font-weight="700" fill="white">11. 🔧 构建与工程化</text>
-  <text x="1226" y="868" font-size="11" fill="#bbf7d0">按需</text>
-
-  <text x="896" y="902" font-size="11" font-weight="700" fill="#86efac">版本管理</text>
-  <text x="896" y="920" font-size="11" fill="#cbd5e1">Git Flow / Trunk-Based Development</text>
-  <text x="896" y="936" font-size="11" fill="#cbd5e1">代码Review规范/提交信息规范</text>
-  <text x="896" y="952" font-size="11" fill="#cbd5e1">Monorepo vs 多仓库策略</text>
-
-  <text x="896" y="972" font-size="11" font-weight="700" fill="#86efac">构建工具</text>
-  <text x="896" y="990" font-size="11" fill="#cbd5e1">Maven: 生命周期/插件/私服</text>
-  <text x="896" y="1006" font-size="11" fill="#cbd5e1">Gradle: 多模块/依赖管理</text>
-  <text x="896" y="1022" font-size="11" fill="#cbd5e1">IDEA高效使用/调试技巧</text>
-
-  <text x="896" y="1042" font-size="11" font-weight="700" fill="#86efac">代码质量</text>
-  <text x="896" y="1060" font-size="11" fill="#cbd5e1">SonarQube/PMD/SpotBugs</text>
-  <text x="896" y="1076" font-size="11" fill="#475569">美团：Plus发布系统/代码审查平台</text>
-
-  <!-- 板块12: 大数据生态 (🟡按需) -->
-  <rect x="1300" y="846" width="360" height="244" rx="10" fill="#1a1206" stroke="#92400e" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="1300" y="846" width="360" height="36" rx="10" fill="#92400e"/>
-  <rect x="1300" y="868" width="360" height="14" fill="#92400e"/>
-  <circle cx="1326" cy="864" r="8" fill="#eab308"/>
-  <text x="1340" y="868" font-size="13" font-weight="700" fill="white">12. 🐘 大数据生态</text>
-  <text x="1600" y="868" font-size="11" fill="#fed7aa">按需</text>
-
-  <text x="1316" y="902" font-size="11" font-weight="700" fill="#fb923c">存储层</text>
-  <text x="1316" y="920" font-size="11" fill="#cbd5e1">HDFS: 分布式文件系统原理</text>
-  <text x="1316" y="936" font-size="11" fill="#cbd5e1">Hive: HQL/分区/分桶/优化</text>
-
-  <text x="1316" y="956" font-size="11" font-weight="700" fill="#fb923c">计算引擎</text>
-  <text x="1316" y="974" font-size="11" fill="#cbd5e1">Spark: RDD/DataFrame/Streaming</text>
-  <text x="1316" y="990" font-size="11" fill="#cbd5e1">Flink: 流批一体/窗口/状态管理</text>
-  <text x="1316" y="1006" font-size="11" fill="#cbd5e1">MapReduce基础原理</text>
-
-  <text x="1316" y="1026" font-size="11" font-weight="700" fill="#fb923c">数仓建设</text>
-  <text x="1316" y="1044" font-size="11" fill="#cbd5e1">ODS/DWD/DWS/ADS分层设计</text>
-  <text x="1316" y="1060" font-size="11" fill="#cbd5e1">数据质量/数据治理/元数据管理</text>
-  <text x="1316" y="1078" font-size="11" fill="#475569">美团：WanXiang / Hive集群</text>
-
-  <!-- ~~~~~~~~~~~~~~~~~ 行4: 4个板块 ~~~~~~~~~~~~~~~~~ -->
-
-  <!-- 板块13: 数据分析 (🟡按需) -->
-  <rect x="40" y="1106" width="400" height="232" rx="10" fill="#110d1e" stroke="#5b21b6" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="40" y="1106" width="400" height="36" rx="10" fill="#5b21b6"/>
-  <rect x="40" y="1128" width="400" height="14" fill="#5b21b6"/>
-  <circle cx="66" cy="1124" r="8" fill="#eab308"/>
-  <text x="80" y="1128" font-size="13" font-weight="700" fill="white">13. 📊 数据分析</text>
-  <text x="384" y="1128" font-size="11" fill="#ede9fe">按需</text>
-
-  <text x="56" y="1162" font-size="11" font-weight="700" fill="#c4b5fd">指标体系</text>
-  <text x="56" y="1180" font-size="11" fill="#cbd5e1">北极星指标/AARRR增长框架</text>
-  <text x="56" y="1196" font-size="11" fill="#cbd5e1">埋点设计/数据采集规范</text>
-  <text x="56" y="1212" font-size="11" fill="#cbd5e1">漏斗分析/留存分析/路径分析</text>
-
-  <text x="56" y="1232" font-size="11" font-weight="700" fill="#c4b5fd">实验与决策</text>
-  <text x="56" y="1250" font-size="11" fill="#cbd5e1">A/B实验设计/统计显著性</text>
-  <text x="56" y="1266" font-size="11" fill="#cbd5e1">假设检验/置信区间/样本量</text>
-
-  <text x="56" y="1286" font-size="11" font-weight="700" fill="#c4b5fd">可视化</text>
-  <text x="56" y="1304" font-size="11" fill="#cbd5e1">SQL数据分析/Python数据处理</text>
-  <text x="56" y="1322" font-size="11" fill="#475569">美团：MDBI魔数 / Ocean / Analytics</text>
-
-  <!-- 板块14: 业务架构与产品思维 (🟡按需) -->
-  <rect x="460" y="1106" width="400" height="232" rx="10" fill="#0e1a0e" stroke="#14532d" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="460" y="1106" width="400" height="36" rx="10" fill="#14532d"/>
-  <rect x="460" y="1128" width="400" height="14" fill="#14532d"/>
-  <circle cx="486" cy="1124" r="8" fill="#eab308"/>
-  <text x="500" y="1128" font-size="13" font-weight="700" fill="white">14. 💼 业务架构与产品思维</text>
-  <text x="808" y="1128" font-size="11" fill="#bbf7d0">按需</text>
-
-  <text x="476" y="1162" font-size="11" font-weight="700" fill="#86efac">领域建模</text>
-  <text x="476" y="1180" font-size="11" fill="#cbd5e1">Event Storming领域事件建模</text>
-  <text x="476" y="1196" font-size="11" fill="#cbd5e1">限界上下文/聚合/值对象</text>
-  <text x="476" y="1212" font-size="11" fill="#cbd5e1">服务边界划分/契约测试</text>
-
-  <text x="476" y="1232" font-size="11" font-weight="700" fill="#86efac">业务模型</text>
-  <text x="476" y="1250" font-size="11" fill="#cbd5e1">电商/O2O/外卖业务模型</text>
-  <text x="476" y="1266" font-size="11" fill="#cbd5e1">支付/用户/POI公共服务</text>
-
-  <text x="476" y="1286" font-size="11" font-weight="700" fill="#86efac">产品技术融合</text>
-  <text x="476" y="1304" font-size="11" fill="#cbd5e1">技术可行性评估/ROI分析</text>
-  <text x="476" y="1322" font-size="11" fill="#475569">美团：各业务公共服务平台</text>
-
-  <!-- 板块15: 爬虫与逆向 (🟡按需) -->
-  <rect x="880" y="1106" width="400" height="232" rx="10" fill="#0d1a0e" stroke="#065f46" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="880" y="1106" width="400" height="36" rx="10" fill="#065f46"/>
-  <rect x="880" y="1128" width="400" height="14" fill="#065f46"/>
-  <circle cx="906" cy="1124" r="8" fill="#eab308"/>
-  <text x="920" y="1128" font-size="13" font-weight="700" fill="white">15. 🕷️ 爬虫、逆向与反爬</text>
-  <text x="1224" y="1128" font-size="11" fill="#a7f3d0">按需</text>
-
-  <text x="896" y="1162" font-size="11" font-weight="700" fill="#6ee7b7">爬虫技术</text>
-  <text x="896" y="1180" font-size="11" fill="#cbd5e1">Scrapy/Playwright/Selenium</text>
-  <text x="896" y="1196" font-size="11" fill="#cbd5e1">分布式爬虫架构/去重/调度</text>
-  <text x="896" y="1212" font-size="11" fill="#cbd5e1">IP代理池/UA池/Cookies管理</text>
-
-  <text x="896" y="1232" font-size="11" font-weight="700" fill="#6ee7b7">逆向工程</text>
-  <text x="896" y="1250" font-size="11" fill="#cbd5e1">JS逆向/混淆/加密参数破解</text>
-  <text x="896" y="1266" font-size="11" fill="#cbd5e1">App逆向/抓包/Frida基础</text>
-
-  <text x="896" y="1286" font-size="11" font-weight="700" fill="#6ee7b7">反爬设计</text>
-  <text x="896" y="1304" font-size="11" fill="#cbd5e1">多层反爬体系/风控融合</text>
-  <text x="896" y="1322" font-size="11" fill="#475569">美团：安全类工具导航</text>
-
-  <!-- 板块16: 风控系统 (🟡按需) -->
-  <rect x="1300" y="1106" width="360" height="232" rx="10" fill="#1a0e0a" stroke="#9a3412" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="1300" y="1106" width="360" height="36" rx="10" fill="#9a3412"/>
-  <rect x="1300" y="1128" width="360" height="14" fill="#9a3412"/>
-  <circle cx="1326" cy="1124" r="8" fill="#eab308"/>
-  <text x="1340" y="1128" font-size="13" font-weight="700" fill="white">16. 🔰 风控系统</text>
-  <text x="1600" y="1128" font-size="11" fill="#fed7aa">按需</text>
-
-  <text x="1316" y="1162" font-size="11" font-weight="700" fill="#fb923c">实时风控</text>
-  <text x="1316" y="1180" font-size="11" fill="#cbd5e1">规则引擎: Drools/自研引擎</text>
-  <text x="1316" y="1196" font-size="11" fill="#cbd5e1">实时特征计算/流式风控</text>
-  <text x="1316" y="1212" font-size="11" fill="#cbd5e1">规则+模型融合架构</text>
-
-  <text x="1316" y="1232" font-size="11" font-weight="700" fill="#fb923c">识别与对抗</text>
-  <text x="1316" y="1250" font-size="11" fill="#cbd5e1">设备指纹/行为分析</text>
-  <text x="1316" y="1266" font-size="11" fill="#cbd5e1">图谱风控/关联分析</text>
-
-  <text x="1316" y="1286" font-size="11" font-weight="700" fill="#fb923c">度量体系</text>
-  <text x="1316" y="1304" font-size="11" fill="#cbd5e1">精率/召回率/误报率优化</text>
-  <text x="1316" y="1322" font-size="11" fill="#475569">美团：安全风控平台</text>
-
-  <!-- ~~~~~~~~~~~~~~~~~ 行5: 4个板块 ~~~~~~~~~~~~~~~~~ -->
-
-  <!-- 板块17: AI/Agent应用接入 (🟠重要) - 大板块 -->
-  <rect x="40" y="1354" width="820" height="256" rx="10" fill="#1a0b2e" stroke="#7c3aed" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="40" y="1354" width="820" height="36" rx="10" fill="#7c3aed"/>
-  <rect x="40" y="1376" width="820" height="14" fill="#7c3aed"/>
-  <circle cx="66" cy="1372" r="8" fill="#f97316"/>
-  <text x="80" y="1376" font-size="13" font-weight="700" fill="white">17. 🤖 AI/Agent 应用接入（工程落地）</text>
-  <text x="804" y="1376" font-size="11" fill="#ddd6fe">重要</text>
-
-  <!-- 左侧列 -->
-  <text x="56" y="1410" font-size="11" font-weight="700" fill="#c4b5fd">Spring AI 工程化</text>
-  <text x="56" y="1428" font-size="11" fill="#cbd5e1">Spring AI 框架集成/ChatModel/EmbeddingModel</text>
-  <text x="56" y="1444" font-size="11" fill="#cbd5e1">对话历史管理/系统提示词工程</text>
-  <text x="56" y="1460" font-size="11" fill="#cbd5e1">多模态输入处理/结构化输出</text>
-
-  <text x="56" y="1480" font-size="11" font-weight="700" fill="#c4b5fd">RAG 系统构建</text>
-  <text x="56" y="1498" font-size="11" fill="#cbd5e1">向量数据库: Milvus/Pinecone/Qdrant</text>
-  <text x="56" y="1514" font-size="11" fill="#cbd5e1">文档解析→分块→Embedding→检索链路</text>
-  <text x="56" y="1530" font-size="11" fill="#cbd5e1">混合检索(向量+关键词)/Rerank策略</text>
-
-  <text x="56" y="1550" font-size="11" font-weight="700" fill="#c4b5fd">生产稳定性</text>
-  <text x="56" y="1568" font-size="11" fill="#cbd5e1">超时/重试/熔断/降级 · 成本控制</text>
-  <text x="56" y="1584" font-size="11" fill="#cbd5e1">异步调用/流式响应/WebFlux集成</text>
-  <text x="56" y="1600" font-size="11" fill="#475569">美团：MLP / Turing / Horus AI平台</text>
-
-  <!-- 右侧列 -->
-  <text x="456" y="1410" font-size="11" font-weight="700" fill="#c4b5fd">Function Calling 封装</text>
-  <text x="456" y="1428" font-size="11" fill="#cbd5e1">工具函数注册/JSON Schema生成</text>
-  <text x="456" y="1444" font-size="11" fill="#cbd5e1">业务接口AI化/权限校验集成</text>
-  <text x="456" y="1460" font-size="11" fill="#cbd5e1">工具调用链路追踪与调试</text>
-
-  <text x="456" y="1480" font-size="11" font-weight="700" fill="#c4b5fd">分工说明（与对侧项目的边界）</text>
-  <text x="456" y="1498" font-size="11" fill="#94a3b8">本项目 ✅: Spring AI接入/RAG工程化</text>
-  <text x="456" y="1514" font-size="11" fill="#94a3b8">本项目 ✅: 模型API调用/稳定性保障</text>
-  <text x="456" y="1530" font-size="11" fill="#94a3b8">本项目 ✅: Function Calling业务对接</text>
-  <text x="456" y="1546" font-size="11" fill="#64748b">AI原理/Agent编排框架 → ai_coding...</text>
-  <text x="456" y="1562" font-size="11" fill="#64748b">MCP协议/Harness Eval → ai_coding...</text>
-  <text x="456" y="1578" font-size="11" fill="#64748b">大模型算法原理 → ai_coding...</text>
-  <text x="456" y="1600" font-size="11" fill="#475569">两项目相互补充，形成完整AI工程体系</text>
-
-  <!-- 板块18: 多语言拓展 (🔵了解) -->
-  <rect x="880" y="1354" width="400" height="256" rx="10" fill="#0a0f1a" stroke="#1e3a8a" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="880" y="1354" width="400" height="36" rx="10" fill="#1e3a8a"/>
-  <rect x="880" y="1376" width="400" height="14" fill="#1e3a8a"/>
-  <circle cx="906" cy="1372" r="8" fill="#3b82f6"/>
-  <text x="920" y="1376" font-size="13" font-weight="700" fill="white">18. 🌍 多语言拓展</text>
-  <text x="1224" y="1376" font-size="11" fill="#bfdbfe">了解即可</text>
-
-  <text x="896" y="1410" font-size="11" font-weight="700" fill="#93c5fd">Go 语言</text>
-  <text x="896" y="1428" font-size="11" fill="#cbd5e1">Goroutine/Channel/GC机制</text>
-  <text x="896" y="1444" font-size="11" fill="#cbd5e1">gin/gorm/工程化最佳实践</text>
-
-  <text x="896" y="1464" font-size="11" font-weight="700" fill="#93c5fd">Python 生态</text>
-  <text x="896" y="1482" font-size="11" fill="#cbd5e1">FastAPI/Django/Flask Web框架</text>
-  <text x="896" y="1498" font-size="11" fill="#cbd5e1">数据科学: NumPy/Pandas/Matplotlib</text>
-  <text x="896" y="1514" font-size="11" fill="#cbd5e1">AI集成: LangChain/OpenAI SDK</text>
-
-  <text x="896" y="1534" font-size="11" font-weight="700" fill="#93c5fd">Node.js &amp; Shell</text>
-  <text x="896" y="1552" font-size="11" fill="#cbd5e1">Express/Fastify/BFF层开发</text>
-  <text x="896" y="1568" font-size="11" fill="#cbd5e1">Shell脚本: 自动化运维脚本</text>
-  <text x="896" y="1588" font-size="11" fill="#cbd5e1">C语言/汇编: 底层了解即可</text>
-  <text x="896" y="1600" font-size="11" fill="#475569">多语言横向比对/场景选型</text>
-
-  <!-- 板块19: 前端技术 (🔵了解) -->
-  <rect x="1300" y="1354" width="360" height="256" rx="10" fill="#0a0a14" stroke="#312e81" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="1300" y="1354" width="360" height="36" rx="10" fill="#312e81"/>
-  <rect x="1300" y="1376" width="360" height="14" fill="#312e81"/>
-  <circle cx="1326" cy="1372" r="8" fill="#3b82f6"/>
-  <text x="1340" y="1376" font-size="13" font-weight="700" fill="white">19. 🖥️ 前端技术</text>
-  <text x="1600" y="1376" font-size="11" fill="#c7d2fe">了解即可</text>
-
-  <text x="1316" y="1410" font-size="11" font-weight="700" fill="#818cf8">React 生态</text>
-  <text x="1316" y="1428" font-size="11" fill="#cbd5e1">Hooks / 状态管理 / 组件设计</text>
-  <text x="1316" y="1444" font-size="11" fill="#cbd5e1">Next.js SSR/SSG/ISR</text>
-
-  <text x="1316" y="1464" font-size="11" font-weight="700" fill="#818cf8">Vue3 生态</text>
-  <text x="1316" y="1482" font-size="11" fill="#cbd5e1">Composition API / Pinia / Vite</text>
-  <text x="1316" y="1498" font-size="11" fill="#cbd5e1">微前端: qiankun/Module Federation</text>
-
-  <text x="1316" y="1518" font-size="11" font-weight="700" fill="#818cf8">工程化</text>
-  <text x="1316" y="1536" font-size="11" fill="#cbd5e1">TypeScript / Webpack / Vite</text>
-  <text x="1316" y="1552" font-size="11" fill="#cbd5e1">前后端联调/API设计/BFF</text>
-  <text x="1316" y="1572" font-size="11" fill="#cbd5e1">性能优化: 懒加载/代码分割</text>
-  <text x="1316" y="1592" font-size="11" fill="#475569">美团：前端类工具导航</text>
-
-  <!-- ~~~~~~~~~~~~~~~~~ 行6: 板块20(测试工程，大板块) ~~~~~~~~~~~~~~~~~ -->
-
-  <!-- 板块20: 测试工程 (🟡按需) - 大板块 -->
-  <rect x="40" y="1626" width="1620" height="280" rx="10" fill="#0e1a14" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="1626" width="1620" height="36" rx="10" fill="#059669"/>
-  <rect x="40" y="1648" width="1620" height="14" fill="#059669"/>
-  <circle cx="66" cy="1644" r="8" fill="#eab308"/>
-  <text x="80" y="1648" font-size="13" font-weight="700" fill="white">20. 🧪 测试工程（分层测试体系）</text>
-  <text x="1610" y="1648" font-size="11" fill="#d1fae5">按需拓展</text>
-
-  <!-- 测试工程四列 -->
-  <!-- 列1: 单元测试 -->
-  <text x="56" y="1686" font-size="12" font-weight="700" fill="#6ee7b7">🔬 单元测试</text>
-  <text x="56" y="1706" font-size="11" fill="#cbd5e1">JUnit 5: @Test/@Nested/@ParameterizedTest</text>
-  <text x="56" y="1722" font-size="11" fill="#cbd5e1">Mockito: Mock/Stub/Verify/Spy</text>
-  <text x="56" y="1738" font-size="11" fill="#cbd5e1">AssertJ / Hamcrest 断言库</text>
-  <text x="56" y="1754" font-size="11" fill="#cbd5e1">代码覆盖率: JaCoCo配置与分析</text>
-  <text x="56" y="1770" font-size="11" fill="#cbd5e1">TDD实践: 红绿重构循环</text>
-  <text x="56" y="1786" font-size="11" fill="#cbd5e1">测试金字塔: 70%单元/20%集成/10%E2E</text>
-  <text x="56" y="1804" font-size="11" fill="#94a3b8">可测试性设计: 依赖注入/接口隔离</text>
-  <text x="56" y="1820" font-size="11" fill="#94a3b8">测试替身模式: Dummy/Fake/Stub/Mock</text>
-  <text x="56" y="1836" font-size="11" fill="#94a3b8">突变测试: PiTest发现测试盲区</text>
-  <text x="56" y="1856" font-size="11" fill="#475569">BDD: Cucumber/Gherkin描述</text>
-  <text x="56" y="1876" font-size="11" fill="#475569">属性测试: jqwik随机输入测试</text>
-  <text x="56" y="1896" font-size="11" fill="#475569">美团：TestAgent单元测试生成</text>
-
-  <!-- 列2: 集成&契约测试 -->
-  <text x="460" y="1686" font-size="12" font-weight="700" fill="#6ee7b7">🔗 集成 &amp; 契约测试</text>
-  <text x="460" y="1706" font-size="11" fill="#cbd5e1">Spring Boot Test: @SpringBootTest</text>
-  <text x="460" y="1722" font-size="11" fill="#cbd5e1">@WebMvcTest / @DataJpaTest 切片测试</text>
-  <text x="460" y="1738" font-size="11" fill="#cbd5e1">Testcontainers: 真实DB/MQ环境隔离</text>
-  <text x="460" y="1754" font-size="11" fill="#cbd5e1">WireMock: HTTP服务Mock/回放</text>
-  <text x="460" y="1770" font-size="11" fill="#cbd5e1">Pact契约测试: 消费者驱动契约</text>
-  <text x="460" y="1786" font-size="11" fill="#cbd5e1">Spring Cloud Contract: 契约生成桩服务</text>
-  <text x="460" y="1804" font-size="11" fill="#94a3b8">DB集成: H2内存数据库测试</text>
-  <text x="460" y="1820" font-size="11" fill="#94a3b8">Redis测试: embedded-redis</text>
-  <text x="460" y="1836" font-size="11" fill="#94a3b8">Kafka集成: EmbeddedKafka</text>
-  <text x="460" y="1856" font-size="11" fill="#475569">测试数据管理: Fixture/Factory模式</text>
-  <text x="460" y="1876" font-size="11" fill="#475569">数据库迁移测试: Flyway/Liquibase</text>
-  <text x="460" y="1896" font-size="11" fill="#475569">美团：测试平台/研发运维工具</text>
-
-  <!-- 列3: 性能&压力测试 -->
-  <text x="880" y="1686" font-size="12" font-weight="700" fill="#6ee7b7">🚀 性能 &amp; 压力测试</text>
-  <text x="880" y="1706" font-size="11" fill="#cbd5e1">JMeter: 线程组/聚合报告/CSV参数化</text>
-  <text x="880" y="1722" font-size="11" fill="#cbd5e1">k6: JS脚本/断言/场景VU控制</text>
-  <text x="880" y="1738" font-size="11" fill="#cbd5e1">Gatling: Scala DSL/高并发场景建模</text>
-  <text x="880" y="1754" font-size="11" fill="#cbd5e1">JMH: Java微基准测试/热点分析</text>
-  <text x="880" y="1770" font-size="11" fill="#cbd5e1">压测指标: TPS/QPS/P99/P999</text>
-  <text x="880" y="1786" font-size="11" fill="#cbd5e1">性能瓶颈定位: arthas/async-profiler</text>
-  <text x="880" y="1804" font-size="11" fill="#94a3b8">链路追踪: 全链路压测染色</text>
-  <text x="880" y="1820" font-size="11" fill="#94a3b8">容量规划: 压测指导弹性伸缩</text>
-  <text x="880" y="1836" font-size="11" fill="#94a3b8">混沌工程: ChaosBlade/Chaos Monkey</text>
-  <text x="880" y="1856" font-size="11" fill="#475569">Wrk/Vegeta: HTTP基准测试工具</text>
-  <text x="880" y="1876" font-size="11" fill="#475569">火焰图分析/内存泄漏检测</text>
-  <text x="880" y="1896" font-size="11" fill="#475569">美团：全链路压测平台</text>
-
-  <!-- 列4: E2E&测试工程化 -->
-  <text x="1300" y="1686" font-size="12" font-weight="700" fill="#6ee7b7">🎭 E2E &amp; 测试工程化</text>
-  <text x="1300" y="1706" font-size="11" fill="#cbd5e1">Playwright: 多浏览器/POM/并行执行</text>
-  <text x="1300" y="1722" font-size="11" fill="#cbd5e1">Selenium: Grid分布式/截图比对</text>
-  <text x="1300" y="1738" font-size="11" fill="#cbd5e1">RestAssured: API自动化测试</text>
-  <text x="1300" y="1754" font-size="11" fill="#cbd5e1">测试环境管理: Docker Compose</text>
-  <text x="1300" y="1770" font-size="11" fill="#cbd5e1">CI集成: 测试在流水线中的位置</text>
-  <text x="1300" y="1786" font-size="11" fill="#cbd5e1">测试报告: Allure/ExtentReports</text>
-  <text x="1300" y="1804" font-size="11" fill="#94a3b8">AI测试: TestAgent/AI辅助用例生成</text>
-  <text x="1300" y="1820" font-size="11" fill="#94a3b8">测试左移: Dev负责单元测试的文化</text>
-  <text x="1300" y="1836" font-size="11" fill="#94a3b8">测试数据: 生产数据脱敏/造数平台</text>
-  <text x="1300" y="1856" font-size="11" fill="#475569">接口文档: Swagger/OpenAPI驱动测试</text>
-  <text x="1300" y="1876" font-size="11" fill="#475569">测试度量: 缺陷密度/逃逸率/覆盖率</text>
-  <text x="1300" y="1896" font-size="11" fill="#475569">美团：测试工程师工具导航</text>
-
-  <!-- ===== 底部进度与版本区 ===== -->
-  <rect x="40" y="1924" width="1620" height="76" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" filter="url(#shadow)"/>
-
-  <!-- 进度条：按优先级 -->
-  <text x="60" y="1944" font-size="12" font-weight="700" fill="#94a3b8">📊 板块优先级分布</text>
-  <!-- 核心必学: 5个 -->
-  <rect x="60" y="1952" width="200" height="14" rx="4" fill="#374151"/>
-  <rect x="60" y="1952" width="200" height="14" rx="4" fill="#ef4444" opacity="0.85"/>
-  <text x="270" y="1963" font-size="11" fill="#fca5a5">🔴 核心必学: 5板块（Spring/DB/MQ/分布式/稳定性）</text>
-
-  <!-- 重要补充: 6个 -->
-  <rect x="60" y="1972" width="150" height="14" rx="4" fill="#374151"/>
-  <rect x="60" y="1972" width="150" height="14" rx="4" fill="#f97316" opacity="0.85"/>
-  <text x="220" y="1983" font-size="11" fill="#fdba74">🟠 重要补充: 6板块（网络/安全/架构/K8s/系统设计/AI）</text>
-
-  <!-- 按需拓展: 7个 -->
-  <rect x="560" y="1952" width="130" height="14" rx="4" fill="#374151"/>
-  <rect x="560" y="1952" width="130" height="14" rx="4" fill="#eab308" opacity="0.85"/>
-  <text x="700" y="1963" font-size="11" fill="#fde047">🟡 按需拓展: 7板块（工程化/大数据/分析/业务/爬虫/风控/测试）</text>
-
-  <!-- 了解即可: 2个 -->
-  <rect x="560" y="1972" width="50" height="14" rx="4" fill="#374151"/>
-  <rect x="560" y="1972" width="50" height="14" rx="4" fill="#3b82f6" opacity="0.85"/>
-  <text x="620" y="1983" font-size="11" fill="#93c5fd">🔵 了解即可: 2板块（多语言/前端）</text>
-
-  <!-- 版本信息 -->
-  <text x="1300" y="1950" font-size="12" font-weight="700" fill="#94a3b8">📋 版本信息</text>
-  <text x="1300" y="1968" font-size="11" fill="#64748b">v1.5.0 · 2026-06 · 20 大板块 · 工程实践定位</text>
-  <text x="1300" y="1984" font-size="11" fill="#64748b">测试工程独立为大板块 · AI/Agent边界明确划分</text>
-  <text x="1300" y="1998" font-size="11" fill="#64748b">关联: java_study(地基) ← 本项目(系统) → ai_coding(提效)</text>
-
-  <!-- 底部装饰线 -->
-  <rect x="0" y="2094" width="1700" height="6" fill="url(#titleGrad)"/>
+  <!-- 标题 -->
+  <rect x="40" y="24" width="1620" height="100" rx="12" fill="#1c2e4a" filter="url(#shadow)"/>
+  <rect x="40" y="24" width="6" height="100" rx="3" fill="url(#titleGrad)"/>
+  <text x="850" y="64" text-anchor="middle" font-size="25" font-weight="700" fill="url(#titleGrad)" filter="url(#glow)">Java 全栈 &amp; AI/Agent 应用开发 · 工程实践 知识体系全景大图</text>
+  <text x="850" y="92" text-anchor="middle" font-size="13" fill="#94a3b8">java_fullstack_ai_agent_study · 23 大板块 · Spring + 分布式 + 大数据 + AI/Agent工程落地 + 多语言框架 + 上下文工程 + Agent编排</text>
+  <text x="850" y="114" text-anchor="middle" font-size="12" fill="#64748b">v2.0.0 · 2026-06  |  定位: 🟠 工程实践 —— 做系统</text>
+
+  <!-- 三层架构 -->
+  <rect x="40" y="140" width="1620" height="50" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="185" y="170" text-anchor="middle" font-size="12" fill="#94a3b8">关联项目：</text>
+  <rect x="260" y="147" width="180" height="28" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="350" y="166" text-anchor="middle" font-size="11" fill="#60a5fa">🔵 java_study 打地基</text>
+  <rect x="660" y="147" width="390" height="28" rx="6" fill="#3d2500" stroke="#f97316" stroke-width="2"/>
+  <text x="855" y="166" text-anchor="middle" font-size="11" font-weight="700" fill="#fb923c">🟠 本项目 java_fullstack_ai_agent_study 做系统 ←</text>
+  <rect x="1265" y="147" width="220" height="28" rx="6" fill="#2d1b5e" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="1375" y="166" text-anchor="middle" font-size="11" fill="#a78bfa">🟣 ai_coding_harness 用AI提效</text>
+
+  <!-- 学习主线 -->
+  <rect x="40" y="206" width="1620" height="40" rx="8" fill="#292524" stroke="#78716c" stroke-width="1"/>
+  <text x="65" y="220" font-size="12" font-weight="700" fill="#fb923c">推荐主线：</text>
+  <text x="65" y="237" font-size="11" fill="#a8a29e">Spring(1)→数据库(2)→消息队列(3)→分布式(4)→稳定性(5)→架构(8)→系统设计(10)→AI接入(17)→多语言AI(21)→上下文工程(22)→Agent编排(23)</text>
+
+  <!-- 图例 -->
+  <rect x="40" y="260" width="1620" height="34" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="70" cy="277" r="7" fill="#ef4444"/><text x="82" y="281" font-size="11" fill="#ef4444">核心必学</text>
+  <circle cx="190" cy="277" r="7" fill="#f97316"/><text x="202" y="281" font-size="11" fill="#f97316">重要补充</text>
+  <circle cx="310" cy="277" r="7" fill="#eab308"/><text x="322" y="281" font-size="11" fill="#eab308">按需拓展</text>
+  <circle cx="430" cy="277" r="7" fill="#3b82f6"/><text x="442" y="281" font-size="11" fill="#3b82f6">了解即可</text>
+  <text x="580" y="281" font-size="11" fill="#64748b">| 本项目聚焦工程落地(做系统) · AI理论/工具/Harness/Eval → ai_coding_harness_engineering_study</text>
+
+  <!-- ======= 行1 板块1~4 y=308 ======= -->
+
+  <!-- 1. Spring全家桶 -->
+  <rect x="40" y="308" width="400" height="260" rx="10" fill="#0f2744" stroke="#1d4ed8" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="308" width="400" height="34" rx="10" fill="#1d4ed8"/>
+  <rect x="40" y="328" width="400" height="14" fill="#1d4ed8"/>
+  <circle cx="64" cy="325" r="7" fill="#ef4444"/>
+  <text x="77" y="330" font-size="12" font-weight="700" fill="white">1. Spring 全家桶  🔴</text>
+  <text x="56" y="362" font-size="10" font-weight="700" fill="#93c5fd">框架核心</text>
+  <text x="56" y="376" font-size="10" fill="#cbd5e1">Spring Framework: IoC/AOP/事件/Bean生命周期</text>
+  <text x="56" y="390" font-size="10" fill="#cbd5e1">Spring Boot: 自动装配/Starter/配置体系</text>
+  <text x="56" y="404" font-size="10" fill="#cbd5e1">Spring MVC: 请求链/过滤器/拦截器</text>
+  <text x="56" y="418" font-size="10" fill="#cbd5e1">Spring Cloud: Nacos/Gateway/OpenFeign</text>
+  <text x="56" y="432" font-size="10" fill="#cbd5e1">Spring Security: 认证/RBAC/OAuth2</text>
+  <text x="56" y="446" font-size="10" fill="#cbd5e1">Spring Data/Batch</text>
+  <text x="56" y="462" font-size="10" font-weight="700" fill="#93c5fd">重点源码</text>
+  <text x="56" y="476" font-size="10" fill="#94a3b8">refresh()→BeanDef→doCreateBean()→AOP代理链</text>
+  <text x="56" y="490" font-size="10" fill="#94a3b8">事务传播/自动装配/@Async/循环依赖三级缓存</text>
+  <text x="56" y="504" font-size="10" fill="#94a3b8">DispatcherServlet→HandlerMapping→参数解析</text>
+  <text x="56" y="522" font-size="10" fill="#475569">美团: MDP / XFrame / Pigeon / OCTO</text>
+  <text x="56" y="536" font-size="10" fill="#475569">AI接入: Spring AI集成模型API (见板块17)</text>
+  <text x="56" y="556" font-size="10" fill="#1d4ed8">板块优先级: 🔴 核心 — 最先学习</text>
+
+  <!-- 2. 数据库与存储 -->
+  <rect x="460" y="308" width="400" height="260" rx="10" fill="#0f2d1e" stroke="#15803d" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="460" y="308" width="400" height="34" rx="10" fill="#15803d"/>
+  <rect x="460" y="328" width="400" height="14" fill="#15803d"/>
+  <circle cx="484" cy="325" r="7" fill="#ef4444"/>
+  <text x="497" y="330" font-size="12" font-weight="700" fill="white">2. 数据库与存储  🔴</text>
+  <text x="476" y="362" font-size="10" font-weight="700" fill="#86efac">关系型</text>
+  <text x="476" y="376" font-size="10" fill="#cbd5e1">MySQL: SQL优化/索引/MVCC/锁机制</text>
+  <text x="476" y="390" font-size="10" fill="#cbd5e1">分库分表: ShardingSphere/水平垂直拆分</text>
+  <text x="476" y="404" font-size="10" fill="#cbd5e1">MyBatis: 动态SQL/插件/缓存</text>
+  <text x="476" y="420" font-size="10" font-weight="700" fill="#86efac">缓存 &amp; NoSQL</text>
+  <text x="476" y="434" font-size="10" fill="#cbd5e1">Redis: 数据结构/持久化/集群/分布式锁</text>
+  <text x="476" y="448" font-size="10" fill="#cbd5e1">ES: 倒排索引/DSL/聚合分析</text>
+  <text x="476" y="462" font-size="10" fill="#cbd5e1">MongoDB/HBase 场景选型</text>
+  <text x="476" y="478" font-size="10" font-weight="700" fill="#86efac">AI场景存储</text>
+  <text x="476" y="492" font-size="10" fill="#cbd5e1">向量数据库: Milvus/Chroma/PgVector</text>
+  <text x="476" y="506" font-size="10" fill="#cbd5e1">Redis Vector: 向量检索/会话记忆存储</text>
+  <text x="476" y="524" font-size="10" fill="#475569">美团: Zebra/Squirrel/Cellar/S3Plus/RDS</text>
+  <text x="476" y="538" font-size="10" fill="#475569">向量存储为AI接入(板块17/22)前置依赖</text>
+  <text x="476" y="556" font-size="10" fill="#15803d">板块优先级: 🔴 核心</text>
+
+  <!-- 3. 消息队列 -->
+  <rect x="880" y="308" width="400" height="260" rx="10" fill="#2d1b00" stroke="#c2410c" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="880" y="308" width="400" height="34" rx="10" fill="#c2410c"/>
+  <rect x="880" y="328" width="400" height="14" fill="#c2410c"/>
+  <circle cx="904" cy="325" r="7" fill="#ef4444"/>
+  <text x="917" y="330" font-size="12" font-weight="700" fill="white">3. 消息队列  🔴</text>
+  <text x="896" y="362" font-size="10" font-weight="700" fill="#fdba74">Kafka 深度</text>
+  <text x="896" y="376" font-size="10" fill="#cbd5e1">分区设计/副本机制/ISR/HW</text>
+  <text x="896" y="390" font-size="10" fill="#cbd5e1">幂等事务消息/ExactlyOnce语义</text>
+  <text x="896" y="404" font-size="10" fill="#cbd5e1">消费者组/Rebalance/消息积压处理</text>
+  <text x="896" y="418" font-size="10" fill="#cbd5e1">Kafka Streams/KSQL流处理</text>
+  <text x="896" y="434" font-size="10" font-weight="700" fill="#fdba74">RocketMQ</text>
+  <text x="896" y="448" font-size="10" fill="#cbd5e1">延迟/顺序/死信队列/事务消息</text>
+  <text x="896" y="464" font-size="10" font-weight="700" fill="#fdba74">异步解耦设计</text>
+  <text x="896" y="478" font-size="10" fill="#cbd5e1">削峰填谷/最终一致/MQ选型权衡</text>
+  <text x="896" y="494" font-size="10" fill="#cbd5e1">Spring Kafka集成/消费者配置</text>
+  <text x="896" y="512" font-size="10" font-weight="700" fill="#fdba74">AI场景</text>
+  <text x="896" y="526" font-size="10" fill="#cbd5e1">长时任务异步化/Agent结果回调通知</text>
+  <text x="896" y="540" font-size="10" fill="#475569">美团: Mafka / Pike(移动端)</text>
+  <text x="896" y="556" font-size="10" fill="#c2410c">板块优先级: 🔴 核心</text>
+
+  <!-- 4. 分布式系统 -->
+  <rect x="1300" y="308" width="360" height="260" rx="10" fill="#1a0f2e" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1300" y="308" width="360" height="34" rx="10" fill="#7c3aed"/>
+  <rect x="1300" y="328" width="360" height="14" fill="#7c3aed"/>
+  <circle cx="1320" cy="325" r="7" fill="#ef4444"/>
+  <text x="1333" y="330" font-size="12" font-weight="700" fill="white">4. 分布式系统  🔴</text>
+  <text x="1314" y="362" font-size="10" font-weight="700" fill="#c4b5fd">分布式理论</text>
+  <text x="1314" y="376" font-size="10" fill="#cbd5e1">CAP/BASE/ACID/Paxos/Raft</text>
+  <text x="1314" y="392" font-size="10" font-weight="700" fill="#c4b5fd">分布式事务</text>
+  <text x="1314" y="406" font-size="10" fill="#cbd5e1">2PC/TCC/Saga/消息最终一致</text>
+  <text x="1314" y="420" font-size="10" fill="#cbd5e1">ZooKeeper: 选举/协调/分布式锁</text>
+  <text x="1314" y="436" font-size="10" font-weight="700" fill="#c4b5fd">服务治理</text>
+  <text x="1314" y="450" font-size="10" fill="#cbd5e1">注册中心/配置中心/服务网格</text>
+  <text x="1314" y="464" font-size="10" fill="#cbd5e1">降级/灰度发布/流量染色</text>
+  <text x="1314" y="480" font-size="10" font-weight="700" fill="#c4b5fd">AI场景</text>
+  <text x="1314" y="494" font-size="10" fill="#cbd5e1">Agent状态持久化/分布式任务调度</text>
+  <text x="1314" y="508" font-size="10" fill="#cbd5e1">Multi-Agent协作的分布式设计</text>
+  <text x="1314" y="524" font-size="10" fill="#475569">美团: OCTO/Cerberus/Lion</text>
+  <text x="1314" y="540" font-size="10" fill="#7c3aed">板块优先级: 🔴 核心</text>
+
+  <!-- ======= 行2 板块5~8 y=582 ======= -->
+
+  <!-- 5. 稳定性保障 -->
+  <rect x="40" y="582" width="400" height="240" rx="10" fill="#2d0f0f" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="582" width="400" height="34" rx="10" fill="#dc2626"/>
+  <rect x="40" y="602" width="400" height="14" fill="#dc2626"/>
+  <circle cx="64" cy="599" r="7" fill="#ef4444"/>
+  <text x="77" y="604" font-size="12" font-weight="700" fill="white">5. 稳定性保障  🔴</text>
+  <text x="56" y="636" font-size="10" font-weight="700" fill="#fca5a5">限流</text>
+  <text x="56" y="650" font-size="10" fill="#cbd5e1">令牌桶/漏桶/固定窗口/滑动窗口</text>
+  <text x="56" y="664" font-size="10" fill="#cbd5e1">Sentinel规则配置/Redis分布式限流</text>
+  <text x="56" y="680" font-size="10" font-weight="700" fill="#fca5a5">熔断降级</text>
+  <text x="56" y="694" font-size="10" fill="#cbd5e1">Resilience4j/熔断状态机三态</text>
+  <text x="56" y="708" font-size="10" fill="#cbd5e1">服务降级策略/快速失败</text>
+  <text x="56" y="724" font-size="10" font-weight="700" fill="#fca5a5">可用性设计</text>
+  <text x="56" y="738" font-size="10" fill="#cbd5e1">幂等性: Token/唯一键/Redis去重</text>
+  <text x="56" y="752" font-size="10" fill="#cbd5e1">多副本/异地多活/故障演练</text>
+  <text x="56" y="768" font-size="10" font-weight="700" fill="#fca5a5">AI系统稳定性</text>
+  <text x="56" y="782" font-size="10" fill="#cbd5e1">模型超时熔断/指数退避重试</text>
+  <text x="56" y="796" font-size="10" fill="#cbd5e1">成本控制/Token限频/异步队列</text>
+  <text x="56" y="812" font-size="10" fill="#475569">美团: Sentinel / Resilience4j</text>
+
+  <!-- 6. 网络与通信 -->
+  <rect x="460" y="582" width="400" height="240" rx="10" fill="#0f1e30" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="460" y="582" width="400" height="34" rx="10" fill="#0284c7"/>
+  <rect x="460" y="602" width="400" height="14" fill="#0284c7"/>
+  <circle cx="484" cy="599" r="7" fill="#f97316"/>
+  <text x="497" y="604" font-size="12" font-weight="700" fill="white">6. 网络与通信  🟠</text>
+  <text x="476" y="636" font-size="10" font-weight="700" fill="#7dd3fc">Netty</text>
+  <text x="476" y="650" font-size="10" fill="#cbd5e1">NIO/事件循环/Pipeline/自定义协议</text>
+  <text x="476" y="664" font-size="10" fill="#cbd5e1">长连接/心跳/连接管理</text>
+  <text x="476" y="680" font-size="10" font-weight="700" fill="#7dd3fc">RPC框架</text>
+  <text x="476" y="694" font-size="10" fill="#cbd5e1">gRPC/Dubbo/Thrift原理对比</text>
+  <text x="476" y="708" font-size="10" fill="#cbd5e1">服务注册/发现/负载均衡</text>
+  <text x="476" y="724" font-size="10" font-weight="700" fill="#7dd3fc">HTTP进阶</text>
+  <text x="476" y="738" font-size="10" fill="#cbd5e1">HTTP/2/WebSocket/SSE流式推送</text>
+  <text x="476" y="752" font-size="10" fill="#cbd5e1">CDN加速/内容分发/回源策略</text>
+  <text x="476" y="768" font-size="10" font-weight="700" fill="#7dd3fc">AI场景</text>
+  <text x="476" y="782" font-size="10" fill="#cbd5e1">SSE: 流式响应集成/前端实时渲染</text>
+  <text x="476" y="796" font-size="10" fill="#cbd5e1">WebSocket: 长连接AI对话应用</text>
+  <text x="476" y="812" font-size="10" fill="#475569">美团: Pigeon/OCTO/Shark</text>
+
+  <!-- 7. 认证授权与安全 -->
+  <rect x="880" y="582" width="400" height="240" rx="10" fill="#1a1a0f" stroke="#a16207" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="880" y="582" width="400" height="34" rx="10" fill="#a16207"/>
+  <rect x="880" y="602" width="400" height="14" fill="#a16207"/>
+  <circle cx="904" cy="599" r="7" fill="#f97316"/>
+  <text x="917" y="604" font-size="12" font-weight="700" fill="white">7. 认证授权与安全  🟠</text>
+  <text x="896" y="636" font-size="10" font-weight="700" fill="#fcd34d">登录体系</text>
+  <text x="896" y="650" font-size="10" fill="#cbd5e1">Session/JWT/OAuth2/SSO单点登录</text>
+  <text x="896" y="664" font-size="10" fill="#cbd5e1">无感刷新Token/第三方授权</text>
+  <text x="896" y="680" font-size="10" font-weight="700" fill="#fcd34d">权限模型</text>
+  <text x="896" y="694" font-size="10" fill="#cbd5e1">RBAC/ABAC设计/Spring Security深度集成</text>
+  <text x="896" y="710" font-size="10" font-weight="700" fill="#fcd34d">安全加固</text>
+  <text x="896" y="724" font-size="10" fill="#cbd5e1">XSS/CSRF/SQL注入/接口签名/脱敏</text>
+  <text x="896" y="740" font-size="10" font-weight="700" fill="#fcd34d">AI系统安全</text>
+  <text x="896" y="754" font-size="10" fill="#cbd5e1">工具调用权限最小化/结果脱敏</text>
+  <text x="896" y="768" font-size="10" fill="#cbd5e1">AI输出内容合规审查集成</text>
+  <text x="896" y="784" font-size="10" fill="#94a3b8">AI安全(Prompt注入防御): 见harness项目</text>
+  <text x="896" y="800" font-size="10" fill="#475569">美团: SSO/ePassport/MTUserCenter</text>
+  <text x="896" y="814" font-size="10" fill="#475569">美团: 安全类工具导航</text>
+
+  <!-- 8. 架构设计 -->
+  <rect x="1300" y="582" width="360" height="240" rx="10" fill="#1a1500" stroke="#b45309" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1300" y="582" width="360" height="34" rx="10" fill="#b45309"/>
+  <rect x="1300" y="602" width="360" height="14" fill="#b45309"/>
+  <circle cx="1320" cy="599" r="7" fill="#f97316"/>
+  <text x="1333" y="604" font-size="12" font-weight="700" fill="white">8. 架构设计  🟠</text>
+  <text x="1314" y="636" font-size="10" font-weight="700" fill="#fbbf24">三高架构</text>
+  <text x="1314" y="650" font-size="10" fill="#cbd5e1">高性能: 缓存/异步/JVM调优/读写分离</text>
+  <text x="1314" y="664" font-size="10" fill="#cbd5e1">高可用: 多活/容灾/SLA/无状态设计</text>
+  <text x="1314" y="678" font-size="10" fill="#cbd5e1">高扩展: 水平扩展/插件化/开闭原则</text>
+  <text x="1314" y="694" font-size="10" font-weight="700" fill="#fbbf24">设计方法论</text>
+  <text x="1314" y="708" font-size="10" fill="#cbd5e1">DDD: 限界上下文/聚合根/领域事件</text>
+  <text x="1314" y="722" font-size="10" fill="#cbd5e1">CQRS/Event Sourcing/Saga/Outbox</text>
+  <text x="1314" y="736" font-size="10" fill="#cbd5e1">容量估算/负载均衡设计</text>
+  <text x="1314" y="752" font-size="10" font-weight="700" fill="#fbbf24">AI系统架构</text>
+  <text x="1314" y="766" font-size="10" fill="#cbd5e1">RAG架构设计/Agent系统分层</text>
+  <text x="1314" y="780" font-size="10" fill="#cbd5e1">Long-running任务架构/异步回调</text>
+  <text x="1314" y="796" font-size="10" fill="#475569">美团: 内部架构评审体系</text>
+  <text x="1314" y="812" font-size="10" fill="#b45309">板块优先级: 🟠 重要</text>
+
+  <!-- ======= 行3 板块9~12 y=836 ======= -->
+
+  <!-- 9. 云计算&云原生 -->
+  <rect x="40" y="836" width="400" height="236" rx="10" fill="#0f1e1a" stroke="#0d9488" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="836" width="400" height="34" rx="10" fill="#0d9488"/>
+  <rect x="40" y="856" width="400" height="14" fill="#0d9488"/>
+  <circle cx="64" cy="853" r="7" fill="#f97316"/>
+  <text x="77" y="858" font-size="12" font-weight="700" fill="white">9. 云计算 &amp; 云原生  🟠</text>
+  <text x="56" y="890" font-size="10" font-weight="700" fill="#5eead4">容器化&amp;编排</text>
+  <text x="56" y="904" font-size="10" fill="#cbd5e1">Docker: 镜像/多阶段构建/网络</text>
+  <text x="56" y="918" font-size="10" fill="#cbd5e1">K8s: Pod/Deployment/Service/HPA</text>
+  <text x="56" y="932" font-size="10" fill="#cbd5e1">Istio/Envoy流量管理/mTLS</text>
+  <text x="56" y="948" font-size="10" font-weight="700" fill="#5eead4">可观测性</text>
+  <text x="56" y="962" font-size="10" fill="#cbd5e1">Prometheus+Grafana/ELK/Jaeger</text>
+  <text x="56" y="976" font-size="10" fill="#cbd5e1">OpenTelemetry链路追踪</text>
+  <text x="56" y="992" font-size="10" font-weight="700" fill="#5eead4">CI/CD &amp; IaC</text>
+  <text x="56" y="1006" font-size="10" fill="#cbd5e1">GitHub Actions/ArgoCD/GitOps</text>
+  <text x="56" y="1020" font-size="10" fill="#cbd5e1">Terraform/Helm Chart</text>
+  <text x="56" y="1036" font-size="10" font-weight="700" fill="#5eead4">AI可观测</text>
+  <text x="56" y="1050" font-size="10" fill="#cbd5e1">Token监控/模型调用链追踪/成本看板</text>
+  <text x="56" y="1064" font-size="10" fill="#475569">美团: HULK/Crane/MCD/Raptor/LogCenter</text>
+
+  <!-- 10. 系统设计与面试 -->
+  <rect x="460" y="836" width="400" height="236" rx="10" fill="#1a0f2e" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="460" y="836" width="400" height="34" rx="10" fill="#7c3aed"/>
+  <rect x="460" y="856" width="400" height="14" fill="#7c3aed"/>
+  <circle cx="484" cy="853" r="7" fill="#f97316"/>
+  <text x="497" y="858" font-size="12" font-weight="700" fill="white">10. 系统设计与面试题  🟠</text>
+  <text x="476" y="890" font-size="10" font-weight="700" fill="#c4b5fd">经典场景</text>
+  <text x="476" y="904" font-size="10" fill="#cbd5e1">短链/秒杀/Feed流/消息推送/搜索</text>
+  <text x="476" y="918" font-size="10" fill="#cbd5e1">推荐系统/评论系统场景设计</text>
+  <text x="476" y="934" font-size="10" font-weight="700" fill="#c4b5fd">分布式场景</text>
+  <text x="476" y="948" font-size="10" fill="#cbd5e1">分布式ID/锁方案/事务选型</text>
+  <text x="476" y="962" font-size="10" fill="#cbd5e1">一致性方案设计/缓存数据库一致</text>
+  <text x="476" y="978" font-size="10" font-weight="700" fill="#c4b5fd">高并发场景</text>
+  <text x="476" y="992" font-size="10" fill="#cbd5e1">接口幂等/限流/热点/削峰填谷</text>
+  <text x="476" y="1008" font-size="10" font-weight="700" fill="#c4b5fd">AI系统设计</text>
+  <text x="476" y="1022" font-size="10" fill="#cbd5e1">RAG系统/Agent系统/流式AI应用设计题</text>
+  <text x="476" y="1036" font-size="10" fill="#cbd5e1">大厂高频面试: 美团/阿里/字节/腾讯</text>
+  <text x="476" y="1052" font-size="10" fill="#cbd5e1">架构面试: DDD/微服务/选型决策</text>
+  <text x="476" y="1064" font-size="10" fill="#475569">综合1~9板块+AI板块知识的综合题</text>
+
+  <!-- 11. 构建与工程化 -->
+  <rect x="880" y="836" width="400" height="236" rx="10" fill="#1a1200" stroke="#92400e" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="880" y="836" width="400" height="34" rx="10" fill="#92400e"/>
+  <rect x="880" y="856" width="400" height="14" fill="#92400e"/>
+  <circle cx="904" cy="853" r="7" fill="#eab308"/>
+  <text x="917" y="858" font-size="12" font-weight="700" fill="white">11. 构建与工程化  🟡</text>
+  <text x="896" y="890" font-size="10" font-weight="700" fill="#fcd34d">Git工作流</text>
+  <text x="896" y="904" font-size="10" fill="#cbd5e1">GitFlow/Trunk-based/Rebase vs Merge</text>
+  <text x="896" y="918" font-size="10" fill="#cbd5e1">大仓管理/Hooks/代码审查</text>
+  <text x="896" y="934" font-size="10" font-weight="700" fill="#fcd34d">构建工具</text>
+  <text x="896" y="948" font-size="10" fill="#cbd5e1">Gradle: 多模块/自定义Task/增量构建</text>
+  <text x="896" y="962" font-size="10" fill="#cbd5e1">Maven: 生命周期/插件/私服搭建</text>
+  <text x="896" y="978" font-size="10" font-weight="700" fill="#fcd34d">质量门禁</text>
+  <text x="896" y="992" font-size="10" fill="#cbd5e1">SonarQube/CheckStyle/依赖安全扫描</text>
+  <text x="896" y="1006" font-size="10" fill="#cbd5e1">SAST/DAST/代码覆盖率检查</text>
+  <text x="896" y="1022" font-size="10" font-weight="700" fill="#fcd34d">AI代码质量</text>
+  <text x="896" y="1036" font-size="10" fill="#cbd5e1">AI生成代码的质量门禁集成</text>
+  <text x="896" y="1050" font-size="10" fill="#94a3b8">Harness/Eval流水线见harness项目</text>
+  <text x="896" y="1064" font-size="10" fill="#475569">美团: Plus发布 / MCD</text>
+
+  <!-- 12. 大数据生态 -->
+  <rect x="1300" y="836" width="360" height="236" rx="10" fill="#0a1f0a" stroke="#166534" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="1300" y="836" width="360" height="34" rx="10" fill="#166534"/>
+  <rect x="1300" y="856" width="360" height="14" fill="#166534"/>
+  <circle cx="1320" cy="853" r="7" fill="#eab308"/>
+  <text x="1333" y="858" font-size="12" font-weight="700" fill="white">12. 大数据生态  🟡</text>
+  <text x="1314" y="890" font-size="10" font-weight="700" fill="#86efac">离线计算</text>
+  <text x="1314" y="904" font-size="10" fill="#cbd5e1">Hadoop: HDFS/MapReduce/YARN</text>
+  <text x="1314" y="918" font-size="10" fill="#cbd5e1">Hive: HQL/分区分桶/ORC/Parquet</text>
+  <text x="1314" y="932" font-size="10" fill="#cbd5e1">Spark: RDD/DataFrame/SparkSQL</text>
+  <text x="1314" y="948" font-size="10" font-weight="700" fill="#86efac">实时计算</text>
+  <text x="1314" y="962" font-size="10" fill="#cbd5e1">Flink: 流批一体/状态/Checkpoint/窗口</text>
+  <text x="1314" y="978" font-size="10" font-weight="700" fill="#86efac">数仓&amp;治理</text>
+  <text x="1314" y="992" font-size="10" fill="#cbd5e1">分层: ODS/DWD/DWS/ADS</text>
+  <text x="1314" y="1006" font-size="10" fill="#cbd5e1">血缘/质量/Atlas/Delta Lake/Iceberg</text>
+  <text x="1314" y="1022" font-size="10" font-weight="700" fill="#86efac">AI与大数据</text>
+  <text x="1314" y="1036" font-size="10" fill="#cbd5e1">训练数据处理/特征工程管线</text>
+  <text x="1314" y="1050" font-size="10" fill="#cbd5e1">Flink实时特征/风控实时计算</text>
+  <text x="1314" y="1064" font-size="10" fill="#475569">美团: WanXiang/Spark/Flink/Talos</text>
+
+  <!-- ======= 行4 板块13~16 y=1086 ======= -->
+
+  <!-- 13. 数据分析 -->
+  <rect x="40" y="1086" width="400" height="220" rx="10" fill="#0a1a0a" stroke="#15803d" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="40" y="1086" width="400" height="34" rx="10" fill="#166534"/>
+  <rect x="40" y="1106" width="400" height="14" fill="#166534"/>
+  <circle cx="64" cy="1103" r="7" fill="#eab308"/>
+  <text x="77" y="1108" font-size="12" font-weight="700" fill="white">13. 数据分析  🟡</text>
+  <text x="56" y="1140" font-size="10" font-weight="700" fill="#86efac">指标与埋点</text>
+  <text x="56" y="1154" font-size="10" fill="#cbd5e1">北极星指标/指标体系/埋点规范</text>
+  <text x="56" y="1168" font-size="10" fill="#cbd5e1">前后端埋点/日志采集/数据质量</text>
+  <text x="56" y="1184" font-size="10" font-weight="700" fill="#86efac">分析方法</text>
+  <text x="56" y="1198" font-size="10" fill="#cbd5e1">漏斗/留存/A/B实验/RFM/Cohort</text>
+  <text x="56" y="1212" font-size="10" fill="#cbd5e1">AARRR增长模型/用户分群/归因</text>
+  <text x="56" y="1228" font-size="10" font-weight="700" fill="#86efac">工具平台</text>
+  <text x="56" y="1242" font-size="10" fill="#cbd5e1">SQL窗口函数/Pandas/可视化</text>
+  <text x="56" y="1256" font-size="10" fill="#cbd5e1">Doris/ClickHouse即席查询</text>
+  <text x="56" y="1272" font-size="10" fill="#475569">美团: MDBI魔数/Ocean灵犀</text>
+  <text x="56" y="1286" font-size="10" fill="#475569">AI赋能: 数据洞察/预测分析</text>
+  <text x="56" y="1298" font-size="10" fill="#475569">美团: Analytics用户行为分析</text>
+
+  <!-- 14. 业务架构与产品思维 -->
+  <rect x="460" y="1086" width="400" height="220" rx="10" fill="#1a1a0a" stroke="#a16207" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="460" y="1086" width="400" height="34" rx="10" fill="#a16207"/>
+  <rect x="460" y="1106" width="400" height="14" fill="#a16207"/>
+  <circle cx="484" cy="1103" r="7" fill="#eab308"/>
+  <text x="497" y="1108" font-size="12" font-weight="700" fill="white">14. 业务架构与产品思维  🟡</text>
+  <text x="476" y="1140" font-size="10" font-weight="700" fill="#fcd34d">业务建模</text>
+  <text x="476" y="1154" font-size="10" fill="#cbd5e1">Event Storming/DDD战略设计</text>
+  <text x="476" y="1168" font-size="10" fill="#cbd5e1">微服务拆分时机/单体优先策略</text>
+  <text x="476" y="1184" font-size="10" font-weight="700" fill="#fcd34d">行业认知</text>
+  <text x="476" y="1198" font-size="10" fill="#cbd5e1">电商/O2O/SaaS/到家平台</text>
+  <text x="476" y="1212" font-size="10" fill="#cbd5e1">GMV/DAU/转化漏斗分析</text>
+  <text x="476" y="1228" font-size="10" font-weight="700" fill="#fcd34d">产品思维</text>
+  <text x="476" y="1242" font-size="10" fill="#cbd5e1">用户分层/MVP/PRD解读</text>
+  <text x="476" y="1258" font-size="10" font-weight="700" fill="#fcd34d">AI赋能业务</text>
+  <text x="476" y="1272" font-size="10" fill="#cbd5e1">智能化产品设计/Copilot模式</text>
+  <text x="476" y="1286" font-size="10" fill="#cbd5e1">AI改造传统业务流程方法论</text>
+  <text x="476" y="1298" font-size="10" fill="#475569">美团: 业务公共服务/POI/支付</text>
+
+  <!-- 15. 爬虫逆向与反爬 -->
+  <rect x="880" y="1086" width="400" height="220" rx="10" fill="#0f1a0f" stroke="#4d7c0f" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="880" y="1086" width="400" height="34" rx="10" fill="#4d7c0f"/>
+  <rect x="880" y="1106" width="400" height="14" fill="#4d7c0f"/>
+  <circle cx="904" cy="1103" r="7" fill="#eab308"/>
+  <text x="917" y="1108" font-size="12" font-weight="700" fill="white">15. 爬虫、逆向与反爬  🟡</text>
+  <text x="896" y="1140" font-size="10" font-weight="700" fill="#a3e635">爬虫技术</text>
+  <text x="896" y="1154" font-size="10" fill="#cbd5e1">Scrapy/Playwright/Puppeteer/Jsoup</text>
+  <text x="896" y="1168" font-size="10" fill="#cbd5e1">分布式爬虫/动态渲染/去重</text>
+  <text x="896" y="1184" font-size="10" font-weight="700" fill="#a3e635">逆向工程</text>
+  <text x="896" y="1198" font-size="10" fill="#cbd5e1">Fiddler/Charles/JS混淆还原/AST</text>
+  <text x="896" y="1212" font-size="10" fill="#cbd5e1">App逆向/SSL Pinning绕过</text>
+  <text x="896" y="1228" font-size="10" font-weight="700" fill="#a3e635">反爬系统</text>
+  <text x="896" y="1242" font-size="10" fill="#cbd5e1">设备指纹/行为建模/验证码对抗</text>
+  <text x="896" y="1256" font-size="10" fill="#cbd5e1">多层防护架构/AI反爬</text>
+  <text x="896" y="1272" font-size="10" font-weight="700" fill="#a3e635">AI辅助</text>
+  <text x="896" y="1286" font-size="10" fill="#cbd5e1">LLM解析非结构化内容/智能识别</text>
+  <text x="896" y="1298" font-size="10" fill="#475569">美团: 安全类工具导航</text>
+
+  <!-- 16. 风控系统 -->
+  <rect x="1300" y="1086" width="360" height="220" rx="10" fill="#1a0a0a" stroke="#dc2626" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="1300" y="1086" width="360" height="34" rx="10" fill="#dc2626"/>
+  <rect x="1300" y="1106" width="360" height="14" fill="#dc2626"/>
+  <circle cx="1320" cy="1103" r="7" fill="#eab308"/>
+  <text x="1333" y="1108" font-size="12" font-weight="700" fill="white">16. 风控系统  🟡</text>
+  <text x="1314" y="1140" font-size="10" font-weight="700" fill="#fca5a5">业务风控</text>
+  <text x="1314" y="1154" font-size="10" fill="#cbd5e1">账号/交易/内容/活动风控</text>
+  <text x="1314" y="1168" font-size="10" fill="#cbd5e1">规则引擎: Drools/动态热更新</text>
+  <text x="1314" y="1184" font-size="10" font-weight="700" fill="#fca5a5">风控技术</text>
+  <text x="1314" y="1198" font-size="10" fill="#cbd5e1">设备指纹/行为序列/图谱风控</text>
+  <text x="1314" y="1212" font-size="10" fill="#cbd5e1">AI风控模型/实时推理/特征工程</text>
+  <text x="1314" y="1228" font-size="10" font-weight="700" fill="#fca5a5">实时架构</text>
+  <text x="1314" y="1242" font-size="10" fill="#cbd5e1">Flink实时/规则+模型融合决策</text>
+  <text x="1314" y="1256" font-size="10" fill="#cbd5e1">ROC/AUC/误判漏判率度量</text>
+  <text x="1314" y="1274" font-size="10" font-weight="700" fill="#fca5a5">与AI结合</text>
+  <text x="1314" y="1288" font-size="10" fill="#cbd5e1">LLM辅助规则生成/内容安全</text>
+  <text x="1314" y="1298" font-size="10" fill="#475569">美团: 安全类工具导航</text>
+
+  <!-- ======= AI板块分隔线 ======= -->
+  <rect x="40" y="1320" width="1620" height="28" rx="6" fill="#1e1040" stroke="#7e22ce" stroke-width="1"/>
+  <text x="850" y="1339" text-anchor="middle" font-size="12" font-weight="700" fill="#a78bfa">AI / Agent 工程实践专区 (板块 17~23) — 聚焦工程化落地，做系统</text>
+
+  <!-- ======= 行5 板块17~20 y=1360 ======= -->
+
+  <!-- 17. AI/Agent 应用接入 -->
+  <rect x="40" y="1360" width="400" height="280" rx="10" fill="#1a0a2e" stroke="#a855f7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="1360" width="400" height="34" rx="10" fill="#7e22ce"/>
+  <rect x="40" y="1380" width="400" height="14" fill="#7e22ce"/>
+  <circle cx="64" cy="1377" r="7" fill="#f97316"/>
+  <text x="77" y="1382" font-size="12" font-weight="700" fill="white">17. AI/Agent 应用接入  🟠</text>
+  <text x="56" y="1414" font-size="10" font-weight="700" fill="#d8b4fe">大模型 API 接入</text>
+  <text x="56" y="1428" font-size="10" fill="#cbd5e1">Spring AI: ChatClient/Advisors/EmbeddingModel</text>
+  <text x="56" y="1442" font-size="10" fill="#cbd5e1">OpenAI/Claude/DeepSeek/通义 接入</text>
+  <text x="56" y="1456" font-size="10" fill="#cbd5e1">Prompt管理/流式响应/多模型路由</text>
+  <text x="56" y="1472" font-size="10" font-weight="700" fill="#d8b4fe">RAG 系统工程化</text>
+  <text x="56" y="1486" font-size="10" fill="#cbd5e1">向量库: Milvus/Chroma/PgVector集成</text>
+  <text x="56" y="1500" font-size="10" fill="#cbd5e1">文档处理管线/Chunking/Embedding</text>
+  <text x="56" y="1514" font-size="10" fill="#cbd5e1">混合检索/企业知识库问答</text>
+  <text x="56" y="1530" font-size="10" font-weight="700" fill="#d8b4fe">Function Calling &amp; 生产稳定性</text>
+  <text x="56" y="1544" font-size="10" fill="#cbd5e1">工具封装: DB/HTTP/微服务工具</text>
+  <text x="56" y="1558" font-size="10" fill="#cbd5e1">MCP Server Java实现/超时熔断</text>
+  <text x="56" y="1572" font-size="10" fill="#cbd5e1">成本控制/Token监控/可观测性</text>
+  <text x="56" y="1588" font-size="10" fill="#cbd5e1">异步化: MQ接入/任务队列/回调</text>
+  <text x="56" y="1606" font-size="10" fill="#475569">美团: MLP/Turing/Horus AI平台</text>
+  <text x="56" y="1620" font-size="10" fill="#94a3b8">AI工具/理论: 见harness项目</text>
+  <text x="56" y="1634" font-size="10" fill="#7e22ce">→ 板块21/22/23的前置依赖</text>
+
+  <!-- 18. 多语言拓展 -->
+  <rect x="460" y="1360" width="400" height="280" rx="10" fill="#0f1a2e" stroke="#1d4ed8" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="460" y="1360" width="400" height="34" rx="10" fill="#1e40af"/>
+  <rect x="460" y="1380" width="400" height="14" fill="#1e40af"/>
+  <circle cx="484" cy="1377" r="7" fill="#3b82f6"/>
+  <text x="497" y="1382" font-size="12" font-weight="700" fill="white">18. 多语言拓展  🔵</text>
+  <text x="476" y="1414" font-size="10" font-weight="700" fill="#93c5fd">Go</text>
+  <text x="476" y="1428" font-size="10" fill="#cbd5e1">语法/Goroutine/Channel/Gin/Gorm</text>
+  <text x="476" y="1444" font-size="10" font-weight="700" fill="#93c5fd">Python</text>
+  <text x="476" y="1458" font-size="10" fill="#cbd5e1">FastAPI/数据处理/脚本自动化</text>
+  <text x="476" y="1472" font-size="10" fill="#cbd5e1">与Java互调/gRPC跨语言调用</text>
+  <text x="476" y="1486" font-size="10" fill="#94a3b8">Python AI框架详见板块21</text>
+  <text x="476" y="1502" font-size="10" font-weight="700" fill="#93c5fd">Node.js</text>
+  <text x="476" y="1516" font-size="10" fill="#cbd5e1">事件循环/NestJS/BFF全栈</text>
+  <text x="476" y="1530" font-size="10" fill="#94a3b8">Node.js AI SDK详见板块21</text>
+  <text x="476" y="1546" font-size="10" font-weight="700" fill="#93c5fd">Shell / C / 汇编</text>
+  <text x="476" y="1560" font-size="10" fill="#cbd5e1">Bash脚本/C内存管理了解</text>
+  <text x="476" y="1574" font-size="10" fill="#cbd5e1">汇编寄存器/栈帧了解层</text>
+  <text x="476" y="1590" font-size="10" font-weight="700" fill="#93c5fd">多语言AI集成</text>
+  <text x="476" y="1604" font-size="10" fill="#cbd5e1">Python/Node.js为AI框架主力语言</text>
+  <text x="476" y="1618" font-size="10" fill="#475569">Python LangChain/AutoGen见板块21</text>
+  <text x="476" y="1634" font-size="10" fill="#475569">Node.js Vercel AI SDK见板块21</text>
+
+  <!-- 19. 前端技术 -->
+  <rect x="880" y="1360" width="400" height="280" rx="10" fill="#1a0f0f" stroke="#b91c1c" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="880" y="1360" width="400" height="34" rx="10" fill="#b91c1c"/>
+  <rect x="880" y="1380" width="400" height="14" fill="#b91c1c"/>
+  <circle cx="904" cy="1377" r="7" fill="#3b82f6"/>
+  <text x="917" y="1382" font-size="12" font-weight="700" fill="white">19. 前端技术  🔵</text>
+  <text x="896" y="1414" font-size="10" font-weight="700" fill="#fca5a5">基础语言</text>
+  <text x="896" y="1428" font-size="10" fill="#cbd5e1">HTML5/CSS3/JavaScript(ES6+)/TypeScript</text>
+  <text x="896" y="1444" font-size="10" font-weight="700" fill="#fca5a5">框架</text>
+  <text x="896" y="1458" font-size="10" fill="#cbd5e1">React: Hooks/Context/状态/SSR</text>
+  <text x="896" y="1472" font-size="10" fill="#cbd5e1">Vue3: Composition API/Pinia/Vite</text>
+  <text x="896" y="1488" font-size="10" font-weight="700" fill="#fca5a5">工程化</text>
+  <text x="896" y="1502" font-size="10" fill="#cbd5e1">Webpack/Vite/前后端联调</text>
+  <text x="896" y="1516" font-size="10" fill="#cbd5e1">RESTful/GraphQL API设计</text>
+  <text x="896" y="1532" font-size="10" font-weight="700" fill="#fca5a5">AI前端集成</text>
+  <text x="896" y="1546" font-size="10" fill="#cbd5e1">流式UI: SSE/useChat/实时渲染</text>
+  <text x="896" y="1560" font-size="10" fill="#cbd5e1">Vercel AI SDK: Next.js全栈AI应用</text>
+  <text x="896" y="1574" font-size="10" fill="#cbd5e1">AI聊天组件/流式输出展示</text>
+  <text x="896" y="1590" font-size="10" font-weight="700" fill="#fca5a5">全栈AI应用</text>
+  <text x="896" y="1604" font-size="10" fill="#cbd5e1">前后端AI能力联动/会话管理</text>
+  <text x="896" y="1618" font-size="10" fill="#475569">美团: Picasso/Mach/Rhino</text>
+  <text x="896" y="1634" font-size="10" fill="#475569">设计: Ingee(印迹)/Cookie(曲奇)</text>
+
+  <!-- 20. 测试工程 -->
+  <rect x="1300" y="1360" width="360" height="280" rx="10" fill="#0a1a0a" stroke="#166534" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="1300" y="1360" width="360" height="34" rx="10" fill="#166534"/>
+  <rect x="1300" y="1380" width="360" height="14" fill="#166534"/>
+  <circle cx="1320" cy="1377" r="7" fill="#eab308"/>
+  <text x="1333" y="1382" font-size="12" font-weight="700" fill="white">20. 测试工程  🟡</text>
+  <text x="1314" y="1414" font-size="10" font-weight="700" fill="#86efac">单元测试</text>
+  <text x="1314" y="1428" font-size="10" fill="#cbd5e1">JUnit 5: 注解/断言/参数化</text>
+  <text x="1314" y="1442" font-size="10" fill="#cbd5e1">Mockito: Mock/Spy/ArgumentCaptor</text>
+  <text x="1314" y="1458" font-size="10" font-weight="700" fill="#86efac">集成测试</text>
+  <text x="1314" y="1472" font-size="10" fill="#cbd5e1">@SpringBootTest/@WebMvcTest</text>
+  <text x="1314" y="1486" font-size="10" fill="#cbd5e1">Testcontainers: MySQL/Redis/Kafka</text>
+  <text x="1314" y="1502" font-size="10" fill="#cbd5e1">WireMock HTTP依赖Mock</text>
+  <text x="1314" y="1518" font-size="10" font-weight="700" fill="#86efac">性能测试</text>
+  <text x="1314" y="1532" font-size="10" fill="#cbd5e1">JMH微基准/JMeter/Gatling/K6</text>
+  <text x="1314" y="1548" font-size="10" fill="#cbd5e1">契约测试/混沌工程/TDD/BDD</text>
+  <text x="1314" y="1564" font-size="10" font-weight="700" fill="#86efac">AI测试</text>
+  <text x="1314" y="1578" font-size="10" fill="#cbd5e1">AI生成代码的单元测试验证</text>
+  <text x="1314" y="1592" font-size="10" fill="#cbd5e1">RAG系统集成测试/Agent行为验证</text>
+  <text x="1314" y="1608" font-size="10" fill="#94a3b8">AI输出Eval/LLM-as-Judge: harness项目</text>
+  <text x="1314" y="1624" font-size="10" fill="#475569">美团: 测试平台(研发运维工具)</text>
+  <text x="1314" y="1638" font-size="10" fill="#166534">板块优先级: 🟡 按需</text>
+
+  <!-- ======= 行6 板块21~23 (大宽板块) y=1656 ======= -->
+
+  <!-- 21. 多语言 AI/Agent 框架 -->
+  <rect x="40" y="1656" width="820" height="320" rx="10" fill="#0d1a2d" stroke="#a855f7" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="1656" width="820" height="34" rx="10" fill="#6d28d9"/>
+  <rect x="40" y="1676" width="820" height="14" fill="#6d28d9"/>
+  <circle cx="64" cy="1673" r="7" fill="#f97316"/>
+  <text x="77" y="1678" font-size="12" font-weight="700" fill="white">21. 多语言 AI/Agent 框架 (Java / Python / Node.js)  🟠</text>
+
+  <!-- Java列 -->
+  <text x="60" y="1710" font-size="10" font-weight="700" fill="#c4b5fd">☕ Java AI/Agent 框架</text>
+  <text x="60" y="1726" font-size="10" fill="#d8b4fe">Spring AI</text>
+  <text x="60" y="1740" font-size="10" fill="#cbd5e1">ChatClient/Advisors/EmbeddingModel</text>
+  <text x="60" y="1754" font-size="10" fill="#cbd5e1">VectorStore/ToolCallback/Memory接口</text>
+  <text x="60" y="1770" font-size="10" fill="#d8b4fe">LangChain4j</text>
+  <text x="60" y="1784" font-size="10" fill="#cbd5e1">AI Service/Tool注解/Memory/RAG管线</text>
+  <text x="60" y="1798" font-size="10" fill="#cbd5e1">Streaming/与Spring集成</text>
+  <text x="60" y="1814" font-size="10" fill="#94a3b8">Java AI框架: 工程化接入首选</text>
+
+  <!-- Python列 -->
+  <text x="310" y="1710" font-size="10" font-weight="700" fill="#c4b5fd">🐍 Python AI/Agent 框架</text>
+  <text x="310" y="1726" font-size="10" fill="#d8b4fe">LangChain (Python)</text>
+  <text x="310" y="1740" font-size="10" fill="#cbd5e1">Chain/LCEL/AgentExecutor/Memory</text>
+  <text x="310" y="1754" font-size="10" fill="#cbd5e1">工具体系/与LangSmith集成</text>
+  <text x="310" y="1770" font-size="10" fill="#d8b4fe">AutoGen</text>
+  <text x="310" y="1784" font-size="10" fill="#cbd5e1">ConversableAgent/GroupChat/代码执行</text>
+  <text x="310" y="1800" font-size="10" fill="#d8b4fe">CrewAI</text>
+  <text x="310" y="1814" font-size="10" fill="#cbd5e1">Crew/Agent/Task/Tool四元组/Process</text>
+  <text x="310" y="1830" font-size="10" fill="#d8b4fe">LlamaIndex / Pydantic AI / smolagents</text>
+  <text x="310" y="1844" font-size="10" fill="#cbd5e1">RAG专项/类型安全/CodeAgent模式</text>
+  <text x="310" y="1860" font-size="10" fill="#94a3b8">Python: Agent编排首选语言生态</text>
+
+  <!-- Node.js & SDK列 -->
+  <text x="570" y="1710" font-size="10" font-weight="700" fill="#c4b5fd">🟨 Node.js AI框架 &amp; 主流 Agent SDK</text>
+  <text x="570" y="1726" font-size="10" fill="#d8b4fe">LangChain.js</text>
+  <text x="570" y="1740" font-size="10" fill="#cbd5e1">与Python版对比/Chain/Agent/Tool</text>
+  <text x="570" y="1756" font-size="10" fill="#d8b4fe">Vercel AI SDK</text>
+  <text x="570" y="1770" font-size="10" fill="#cbd5e1">useChat/streamText/Next.js全栈AI</text>
+  <text x="570" y="1786" font-size="10" fill="#d8b4fe">OpenAI Node SDK</text>
+  <text x="570" y="1800" font-size="10" fill="#cbd5e1">Assistants API/Streaming/Function Calling</text>
+  <text x="570" y="1820" font-size="10" fill="#a78bfa">🧰 主流 Agent SDK 工程实践</text>
+  <text x="570" y="1836" font-size="10" fill="#cbd5e1">OpenAI Agents SDK: Agent+Handoff+Guardrails</text>
+  <text x="570" y="1852" font-size="10" fill="#cbd5e1">Google ADK: Sequential/Parallel/LoopAgent</text>
+  <text x="570" y="1868" font-size="10" fill="#cbd5e1">AWS Strands: Bedrock/agent_as_tool</text>
+  <text x="570" y="1884" font-size="10" fill="#cbd5e1">Anthropic SDK: Tool Use Loop/Computer Use</text>
+  <text x="570" y="1900" font-size="10" fill="#475569">SDK对比选型/A2A协议了解</text>
+  <text x="570" y="1914" font-size="10" fill="#475569">SDK原理详细对比: harness项目</text>
+  <text x="570" y="1936" font-size="10" fill="#6d28d9">→ 前置: 板块17  → 服务于板块22/23</text>
+
+  <!-- 22. 上下文工程 -->
+  <rect x="880" y="1656" width="820" height="320" rx="10" fill="#0d1a2d" stroke="#0ea5e9" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="880" y="1656" width="820" height="34" rx="10" fill="#0369a1"/>
+  <rect x="880" y="1676" width="820" height="14" fill="#0369a1"/>
+  <circle cx="904" cy="1673" r="7" fill="#f97316"/>
+  <text x="917" y="1678" font-size="12" font-weight="700" fill="white">22. 上下文工程（工程化落地）  🟠</text>
+  <text x="892" y="1706" font-size="10" fill="#94a3b8">本章聚焦工程化落地: 在业务系统中如何设计、管理和优化传递给模型的信息内容</text>
+
+  <!-- 左半部分 -->
+  <text x="900" y="1726" font-size="10" font-weight="700" fill="#7dd3fc">上下文窗口管理</text>
+  <text x="900" y="1740" font-size="10" fill="#cbd5e1">迷失中间问题对策/有效利用策略</text>
+  <text x="900" y="1754" font-size="10" fill="#cbd5e1">分片/摘要/动态截断工程实现</text>
+  <text x="900" y="1770" font-size="10" font-weight="700" fill="#7dd3fc">对话历史管理</text>
+  <text x="900" y="1784" font-size="10" fill="#cbd5e1">Spring AI: InMemoryChatMemory/CassandraChatMemory</text>
+  <text x="900" y="1798" font-size="10" fill="#cbd5e1">LangChain4j ConversationMemory</text>
+  <text x="900" y="1812" font-size="10" fill="#cbd5e1">滑动窗口/重要性排序/动态压缩</text>
+  <text x="900" y="1828" font-size="10" font-weight="700" fill="#7dd3fc">Memory 记忆体系</text>
+  <text x="900" y="1842" font-size="10" fill="#cbd5e1">短期: 对话历史保留与裁剪</text>
+  <text x="900" y="1856" font-size="10" fill="#cbd5e1">长期: 向量数据库持久化(Milvus等)</text>
+  <text x="900" y="1870" font-size="10" fill="#cbd5e1">实体记忆: 结构化知识抽取动态注入</text>
+  <text x="900" y="1884" font-size="10" fill="#cbd5e1">跨会话: SessionID/版本控制/失效策略</text>
+
+  <!-- 右半部分 -->
+  <text x="1170" y="1726" font-size="10" font-weight="700" fill="#7dd3fc">RAG 工程化深度实践</text>
+  <text x="1170" y="1740" font-size="10" fill="#cbd5e1">Chunking策略: 固定/句子/语义切分</text>
+  <text x="1170" y="1754" font-size="10" fill="#cbd5e1">Embedding: 批处理/增量更新/缓存</text>
+  <text x="1170" y="1768" font-size="10" fill="#cbd5e1">混合检索: 向量+BM25 Spring集成</text>
+  <text x="1170" y="1782" font-size="10" fill="#cbd5e1">Reranker/GraphRAG/Agentic RAG</text>
+  <text x="1170" y="1798" font-size="10" font-weight="700" fill="#7dd3fc">Structured Output</text>
+  <text x="1170" y="1812" font-size="10" fill="#cbd5e1">Spring AI: BeanOutputConverter/MapOutputConverter</text>
+  <text x="1170" y="1826" font-size="10" fill="#cbd5e1">LangChain4j AiServices 接口自动推导</text>
+  <text x="1170" y="1840" font-size="10" fill="#cbd5e1">Pydantic AI 类型安全/流式结构化解析</text>
+  <text x="1170" y="1856" font-size="10" font-weight="700" fill="#7dd3fc">工具调用工程深化</text>
+  <text x="1170" y="1870" font-size="10" fill="#cbd5e1">并行vs顺序工具调用选型</text>
+  <text x="1170" y="1884" font-size="10" fill="#cbd5e1">错误处理/重试/降级工程实现</text>
+  <text x="1170" y="1898" font-size="10" fill="#cbd5e1">MCP Client集成: Java/Python消费MCP能力</text>
+  <text x="1170" y="1912" font-size="10" fill="#475569">上下文工程概念原理: harness项目</text>
+  <text x="1170" y="1930" font-size="10" fill="#0369a1">→ 前置: 板块17  → 服务于板块23</text>
+
+  <!-- ======= 行7 板块23 (全宽) y=1990 ======= -->
+
+  <!-- 23. Agent 模式与编排 -->
+  <rect x="40" y="1990" width="1620" height="360" rx="10" fill="#0a0a1a" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="1990" width="1620" height="34" rx="10" fill="#5b21b6"/>
+  <rect x="40" y="2010" width="1620" height="14" fill="#5b21b6"/>
+  <circle cx="64" cy="2007" r="7" fill="#f97316"/>
+  <text x="77" y="2012" font-size="12" font-weight="700" fill="white">23. Agent 模式与编排（工程实践）  🟠</text>
+  <text x="500" y="2012" font-size="10" fill="#c4b5fd">| 前置: 板块22  | Agent原理/SDK详细对比: harness项目</text>
+
+  <!-- 第1列: Agent基础模式 -->
+  <text x="60" y="2044" font-size="10" font-weight="700" fill="#c4b5fd">Agent 基础模式工程实践</text>
+  <text x="60" y="2060" font-size="10" fill="#d8b4fe">ReAct</text>
+  <text x="60" y="2074" font-size="10" fill="#cbd5e1">推理+行动循环实现/工具结果注入</text>
+  <text x="60" y="2088" font-size="10" fill="#cbd5e1">循环终止条件设计/错误恢复</text>
+  <text x="60" y="2104" font-size="10" fill="#d8b4fe">Plan-and-Execute</text>
+  <text x="60" y="2118" font-size="10" fill="#cbd5e1">Planner+Executor分离架构</text>
+  <text x="60" y="2132" font-size="10" fill="#cbd5e1">步骤依赖管理/动态重规划</text>
+  <text x="60" y="2148" font-size="10" fill="#d8b4fe">Reflection / Reflexion</text>
+  <text x="60" y="2162" font-size="10" fill="#cbd5e1">自我评审提示词/修正循环终止</text>
+  <text x="60" y="2176" font-size="10" fill="#cbd5e1">Episodic Buffer持久化/经验积累</text>
+  <text x="60" y="2192" font-size="10" fill="#d8b4fe">Self-Ask / Tree of Thoughts</text>
+  <text x="60" y="2206" font-size="10" fill="#cbd5e1">子问题分解/树形推理路径设计</text>
+  <text x="60" y="2222" font-size="10" fill="#cbd5e1">回溯机制/分支评分与裁剪</text>
+
+  <!-- 第2列: Multi-Agent -->
+  <text x="470" y="2044" font-size="10" font-weight="700" fill="#c4b5fd">Multi-Agent 模式工程实践</text>
+  <text x="470" y="2060" font-size="10" fill="#d8b4fe">Orchestrator-Worker</text>
+  <text x="470" y="2074" font-size="10" fill="#cbd5e1">主控分发+Worker并行工程实现</text>
+  <text x="470" y="2088" font-size="10" fill="#cbd5e1">CompletableFuture/asyncio 并行汇聚</text>
+  <text x="470" y="2104" font-size="10" fill="#d8b4fe">Supervisor 监督者</text>
+  <text x="470" y="2118" font-size="10" fill="#cbd5e1">质量评分路由/反馈循环设计</text>
+  <text x="470" y="2134" font-size="10" fill="#d8b4fe">Swarm 去中心化</text>
+  <text x="470" y="2148" font-size="10" fill="#cbd5e1">Handoff机制/状态传递协议</text>
+  <text x="470" y="2164" font-size="10" fill="#d8b4fe">Pipeline 流水线</text>
+  <text x="470" y="2178" font-size="10" fill="#cbd5e1">线性Agent流水线/阶段数据契约</text>
+  <text x="470" y="2194" font-size="10" fill="#d8b4fe">Parallel Fan-out</text>
+  <text x="470" y="2208" font-size="10" fill="#cbd5e1">任务并行拆解+结果汇聚异步实现</text>
+  <text x="470" y="2224" font-size="10" fill="#cbd5e1">消息路由设计/Agent通信协议</text>
+
+  <!-- 第3列: 编排框架 -->
+  <text x="870" y="2044" font-size="10" font-weight="700" fill="#c4b5fd">Agent 编排框架工程实践</text>
+  <text x="870" y="2060" font-size="10" fill="#d8b4fe">LangGraph (Python)</text>
+  <text x="870" y="2074" font-size="10" fill="#cbd5e1">StateGraph构建/节点函数/条件边</text>
+  <text x="870" y="2088" font-size="10" fill="#cbd5e1">循环图/Checkpoint持久化/流式执行</text>
+  <text x="870" y="2104" font-size="10" fill="#d8b4fe">LangGraph (Java SDK)</text>
+  <text x="870" y="2118" font-size="10" fill="#cbd5e1">与Spring集成/Java版图构建API</text>
+  <text x="870" y="2134" font-size="10" fill="#d8b4fe">AutoGen</text>
+  <text x="870" y="2148" font-size="10" fill="#cbd5e1">ConversableAgent/GroupChatManager</text>
+  <text x="870" y="2162" font-size="10" fill="#cbd5e1">代码执行沙箱/Skill函数注册</text>
+  <text x="870" y="2178" font-size="10" fill="#d8b4fe">CrewAI</text>
+  <text x="870" y="2192" font-size="10" fill="#cbd5e1">Crew/Agent/Task定义/Process选型</text>
+  <text x="870" y="2206" font-size="10" fill="#cbd5e1">Sequential/Hierarchical/工具绑定</text>
+  <text x="870" y="2222" font-size="10" fill="#d8b4fe">LangChain AgentExecutor</text>
+  <text x="870" y="2236" font-size="10" fill="#cbd5e1">工具链组装/内存集成/LCEL结合</text>
+
+  <!-- 第4列: Agent核心能力 -->
+  <text x="1280" y="2044" font-size="10" font-weight="700" fill="#c4b5fd">Agent 核心能力工程实现</text>
+  <text x="1280" y="2060" font-size="10" fill="#d8b4fe">记忆 &amp; 状态管理</text>
+  <text x="1280" y="2074" font-size="10" fill="#cbd5e1">In-context/External Memory管理</text>
+  <text x="1280" y="2088" font-size="10" fill="#cbd5e1">Checkpointing/状态持久化(Redis/DB)</text>
+  <text x="1280" y="2104" font-size="10" fill="#d8b4fe">Human-in-the-loop</text>
+  <text x="1280" y="2118" font-size="10" fill="#cbd5e1">审批节点/断点续传/中断恢复</text>
+  <text x="1280" y="2134" font-size="10" fill="#d8b4fe">可观测性</text>
+  <text x="1280" y="2148" font-size="10" fill="#cbd5e1">LangSmith/LangFuse/OpenTelemetry</text>
+  <text x="1280" y="2162" font-size="10" fill="#cbd5e1">Trace追踪/指标监控</text>
+  <text x="1280" y="2178" font-size="10" fill="#d8b4fe">Computer Use / Browser Use</text>
+  <text x="1280" y="2192" font-size="10" fill="#cbd5e1">桌面操控集成/Browser Agent</text>
+  <text x="1280" y="2206" font-size="10" fill="#cbd5e1">DOM解析/截图感知/错误恢复</text>
+  <text x="1280" y="2222" font-size="10" fill="#d8b4fe">Long-running Agent</text>
+  <text x="1280" y="2236" font-size="10" fill="#cbd5e1">异步任务+轮询+结果回调模式</text>
+  <text x="1280" y="2250" font-size="10" fill="#cbd5e1">任务队列(Kafka/MQ)/优先级队列</text>
+  <text x="1280" y="2264" font-size="10" fill="#d8b4fe">Agent 评估</text>
+  <text x="1280" y="2278" font-size="10" fill="#cbd5e1">Trajectory评估/行为录制回放</text>
+  <text x="1280" y="2292" font-size="10" fill="#94a3b8">Eval/LLM-as-Judge: harness项目</text>
+  <text x="1280" y="2310" font-size="10" fill="#5b21b6">前置: 板块17(AI接入) + 板块22(上下文工程)</text>
+
+  <!-- ======= 美团工具导航说明区 ======= -->
+  <rect x="40" y="2370" width="1620" height="200" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="40" y="2370" width="1620" height="34" rx="10" fill="#334155"/>
+  <rect x="40" y="2390" width="1620" height="14" fill="#334155"/>
+  <text x="77" y="2395" font-size="12" font-weight="700" fill="#e2e8f0">美团工具服务导航 — 理论到生产的映射</text>
+  <text x="56" y="2424" font-size="10" fill="#94a3b8">本项目 美团工具服务导航/ 目录记录的是技术在美团生产环境中的具体落地形态，可对照学习：</text>
+  <text x="56" y="2442" font-size="10" fill="#cbd5e1">🔧 研发运维: MDP框架/OCTO注册发现/Raptor监控/LogCenter/Plus发布/MCD容器  →  研发运维工具.md</text>
+  <text x="56" y="2458" font-size="10" fill="#cbd5e1">🗄️ 存储架构: Zebra分库分表/Squirrel内存/Cellar持久/S3Plus对象/RDS托管/Cerberus分布式锁  →  架构类.md</text>
+  <text x="56" y="2474" font-size="10" fill="#cbd5e1">📨 消息队列: Mafka(基于Kafka)/Pike(移动端)  |  🌐 网关: Shepherd/Oceanus(七层)/MGW(四层)  →  架构类.md</text>
+  <text x="56" y="2490" font-size="10" fill="#cbd5e1">🤖 AI平台: MLP模型平台/Turing/Horus AI中台/MLX  |  🐘 大数据: WanXiang/Flink/Spark/Talos  →  数据类.md</text>
+  <text x="56" y="2506" font-size="10" fill="#cbd5e1">🔐 安全认证: SSO/ePassport/MTUserCenter  |  🏗️ 云原生: HULK/Crane(容器调度)  →  安全类.md/架构类.md</text>
+  <text x="56" y="2522" font-size="10" fill="#cbd5e1">🖥️ 前端: Picasso/Mach/Rhino  |  💬 通讯: IM/Hedwig/SMS/TTS  |  🎨 设计: Ingee/Cookie  →  前端类/通讯类/设计类.md</text>
+  <text x="56" y="2538" font-size="10" fill="#475569">还包含 工程师工具导航/: 前端工程师/后台工程师/算法工程师/数据工程师/测试工程师/运维工程师</text>
+  <text x="56" y="2554" font-size="10" fill="#475569">完整导航: 美团工具服务导航/ 目录  |  详细内容: meituan_work_space(MWS).md</text>
+
+  <!-- ======= 项目结构说明 ======= -->
+  <rect x="40" y="2588" width="1620" height="380" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="40" y="2588" width="1620" height="34" rx="10" fill="#1e293b"/>
+  <rect x="40" y="2608" width="1620" height="14" fill="#1e293b"/>
+  <text x="77" y="2613" font-size="12" font-weight="700" fill="#e2e8f0">项目目录结构（规划中，随进度创建）</text>
+  <text x="56" y="2642" font-size="10" fill="#64748b">java_fullstack_ai_agent_study/</text>
+  <text x="56" y="2658" font-size="10" fill="#cbd5e1">├── spring/ databases/ messaging/ network/ security/ distributed/ architecture/  ←  板块1~8</text>
+  <text x="56" y="2674" font-size="10" fill="#cbd5e1">├── cloud-native/ system-design/ build-tools/ big-data/ data-analysis/          ←  板块9~13</text>
+  <text x="56" y="2690" font-size="10" fill="#cbd5e1">├── business-arch/ crawler-reverse/ risk-control/                               ←  板块14~16</text>
+  <text x="56" y="2706" font-size="10" fill="#cbd5e1">├── other-languages/ frontend/ testing/                                         ←  板块18~20</text>
+  <text x="56" y="2726" font-size="10" fill="#a78bfa">├── ai/                                 ← AI/Agent 工程实践专区（板块17~23统一入口）</text>
+  <text x="56" y="2742" font-size="10" fill="#c4b5fd">│   ├── ai-agent/                       ← 板块17: AI/Agent应用接入 (spring-ai/rag/function-calling/mcp-server/stability)</text>
+  <text x="56" y="2758" font-size="10" fill="#c4b5fd">│   ├── multi-lang-frameworks/          ← 板块21: 多语言框架 (java/spring-ai+langchain4j  python/langchain+autogen+crewai  nodejs/)</text>
+  <text x="56" y="2774" font-size="10" fill="#c4b5fd">│   ├── agent-sdk/                      ← Agent SDK实践 (openai-agents-sdk/ google-adk/ aws-strands/ anthropic-tool-use/)</text>
+  <text x="56" y="2790" font-size="10" fill="#c4b5fd">│   ├── context-engineering/            ← 板块22: 上下文工程 (context-window/ memory/ rag-advanced/ structured-output/ tools-engineering/)</text>
+  <text x="56" y="2806" font-size="10" fill="#c4b5fd">│   └── agent-patterns/                 ← 板块23: Agent编排 (patterns/ multi-agent/ orchestration/ agent-core/ computer-use/ long-running/)</text>
+  <text x="56" y="2826" font-size="10" fill="#475569">├── 美团工具服务导航/  (工程师工具导航/ + 公共服务工具导航/)   ← 美团内部技术工具索引</text>
+  <text x="56" y="2842" font-size="10" fill="#475569">└── meituan_work_space(MWS).md                                 ← 美团内部技术平台组件索引</text>
+
+  <!-- ======= 更新记录 ======= -->
+  <rect x="40" y="2988" width="1620" height="154" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="40" y="2988" width="1620" height="34" rx="10" fill="#1e293b"/>
+  <rect x="40" y="3008" width="1620" height="14" fill="#1e293b"/>
+  <text x="77" y="3013" font-size="12" font-weight="700" fill="#e2e8f0">更新记录</text>
+  <text x="56" y="3042" font-size="10" fill="#64748b">v1.0.0 (2026-05-23)  项目初始化 · 基础20板块架构</text>
+  <text x="56" y="3058" font-size="10" fill="#64748b">v1.5.0 (2026-06-06)  补充Agent SDK板块 · 完善AI接入内容</text>
+  <text x="56" y="3074" font-size="10" fill="#cbd5e1">v2.0.0 (2026-06-13)  重大重构: 从ai_coding_harness_engineering_study迁入「上下文工程」「Agent模式与编排」两大板块</text>
+  <text x="56" y="3090" font-size="10" fill="#cbd5e1">                      扩展至23板块 · 新增ai/目录统一入口 · 新增板块21多语言AI框架 · 新增板块22上下文工程 · 新增板块23Agent编排</text>
+  <text x="56" y="3106" font-size="10" fill="#cbd5e1">                      与ai_coding_harness_engineering_study明确分工: 本项目做系统/工程落地 · 对方做工具/Harness/理论</text>
+
+  <!-- 底部 -->
+  <rect x="40" y="3158" width="1620" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="850" y="3177" text-anchor="middle" font-size="11" fill="#64748b">持续更新中 🚀 · 定位: 工程实践 —— 做系统 | AI时代的全栈工程师，既能构建AI应用，也能做好工程化</text>
 </svg>
