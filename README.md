@@ -1,4 +1,4 @@
-# 📚 Java 后端 & 全栈 & AI 应用接入 工程实践项目
+# 📚 Java 后端 & 全栈 & AI/Agent 应用开发 工程实践项目
 
 <div align="center">
 
@@ -13,10 +13,10 @@
 
 ## 📌 项目定位
 
-本项目是一个面向**工程实践**的系统性学习仓库，**不是真实的生产项目**。聚焦于 Java 全栈工程化体系的深度实践，横跨后端架构、分布式系统、大数据生态、数据分析、风控与爬虫、前端、多语言拓展、AI/Agent **系统接入与工程落地**等方向，以动手实验、场景设计、面试题解析为主要学习载体，逐步构建完整的全栈工程师知识体系。
+本项目是一个面向**工程实践**的系统性学习仓库，**不是真实的生产项目**。聚焦于 Java 全栈工程化体系的深度实践，横跨后端架构、分布式系统、大数据生态、数据分析、风控与爬虫、前端、多语言拓展、**AI/Agent 应用开发与工程落地**等方向，以动手实验、场景设计、面试题解析为主要学习载体，逐步构建完整的全栈工程师知识体系。
 
-**核心学习方向（20 大板块）：**
-`Spring 全家桶` · `数据库与存储` · `消息队列` · `分布式系统` · `架构设计` · `系统设计与面试题` · `稳定性保障` · `网络与通信` · `认证授权与安全` · `云计算 & 云原生` · `大数据生态` · `数据分析` · `爬虫·逆向·反爬·风控` · `多语言拓展 + 前端` · `AI/Agent 应用接入（做系统）` · `构建与工程化` · `业务架构与产品思维` · **`测试工程`**
+**核心学习方向（23 大板块）：**
+`Spring 全家桶` · `数据库与存储` · `消息队列` · `分布式系统` · `稳定性保障` · `网络与通信` · `认证授权与安全` · `架构设计` · `云计算 & 云原生` · `系统设计与面试题` · `构建与工程化` · `大数据生态` · `数据分析` · `业务架构与产品思维` · `爬虫·逆向·反爬` · `风控系统` · `AI/Agent 应用接入（做系统）` · `多语言拓展` · `前端技术` · `测试工程` · `多语言 AI/Agent 框架` · `上下文工程（工程化落地）` · `Agent 模式与编排（工程实践）`
 
 > ⚠️ **关联项目分工说明**
 >
@@ -25,23 +25,25 @@
 > | 项目 | 定位 | 核心聚焦 |
 > |------|:----:|---------|
 > | [`java_study`](../java_study) | 🔵 基础理论 | Java 语言核心、并发深度、JVM 原理、IO/NIO 体系、数据结构与算法、设计模式、计算机基础理论、信息安全基础、软件工程基础、性能工程、调试排查、前沿技术趋势——**打地基** |
-> | **本项目**（`java_fullstack_ai_agent_study`） | 🟠 工程实践 | Spring 生态、分布式架构、大数据、存储中间件、风控爬虫、数据分析、多语言、AI/Agent 系统接入、测试工程——**做系统** |
-> | [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study) | 🟣 AI 工程 | AI 编程方法论、上下文工程、AI 工具工程化、Harness 理论、AI Coding 工具链、大模型与 Agent 开发知识——**用 AI 提效** |
+> | **本项目**（`java_fullstack_ai_agent_study`） | 🟠 工程实践 | Spring 生态、分布式架构、大数据、存储中间件、风控爬虫、数据分析、多语言、**AI/Agent 应用开发（Spring AI / LangChain4j / LangGraph / AutoGen / 上下文工程落地 / Agent 编排）**、测试工程——**做系统** |
+> | [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study) | 🟣 AI 工程提效 | AI 编程方法论、AI 工具工程化（MCP/Skill/Hooks）、Harness 理论（Eval/LLM-as-Judge）、AI Coding 工具链（Claude Code / Cursor / Codex）、大模型理论了解——**用 AI 提效** |
 
 > 📐 **AI/Agent 在两个项目中的分工边界**
 >
 > | 关注点 | 本项目（做系统）| `ai_coding_harness_engineering_study`（用 AI 提效）|
 > |--------|:-------------:|:-----------------------------------------------:|
-> | Spring AI 接入、模型 API 调用 | ✅ | — |
-> | RAG 系统工程化（向量数据库集成/检索服务）| ✅ | — |
-> | Function Calling 封装与业务对接 | ✅ | — |
-> | 模型调用稳定性（超时/熔断/限流/成本）| ✅ | — |
-> | AI 算法原理（Transformer/RLHF/MoE）| — | ✅ |
-> | Agent 编排框架（LangGraph/AutoGen/CrewAI）| — | ✅ |
-> | Agent SDK 对比与设计哲学 | — | ✅ |
-> | MCP 协议原理与扩展开发 | — | ✅ |
-> | Harness/Eval 框架（LLM-as-Judge）| — | ✅ |
-> | AI Coding 工具使用（Claude Code/Cursor）| — | ✅ |
+> | Spring AI / LangChain4j 接入、模型 API 调用 | ✅ 工程化落地 | — |
+> | RAG 系统工程化（向量数据库集成 / 检索服务）| ✅ 系统集成 | — |
+> | Function Calling 封装与业务对接 | ✅ 业务接口 AI 化 | — |
+> | 上下文工程（工程化落地，Spring AI Memory / RAG 工程集成）| ✅ 工程落地 | — |
+> | Agent 模式与编排框架（LangGraph / AutoGen / CrewAI 工程实践）| ✅ 应用开发 | — |
+> | Agent SDK 工程实践（OpenAI Agents SDK / Google ADK / AWS Strands）| ✅ 工程实践 | — |
+> | 多语言 AI/Agent 框架（Python LangChain / Node.js Vercel AI SDK）| ✅ 多语言实践 | — |
+> | MCP 协议原理与 AI 工具侧扩展开发 | — | ✅ 工具工程化 |
+> | Harness / Eval 框架（LLM-as-Judge）| — | ✅ 质量保障 |
+> | AI Coding 工具使用（Claude Code / Cursor 深度实践）| — | ✅ 工具提效 |
+> | Claude Code 源码研究 | — | ✅ 源码学习 |
+> | AI 算法原理（Transformer / RLHF / MoE，了解层）| — | ✅ 理论了解 |
 
 ---
 
@@ -75,8 +77,11 @@
 | 18 | 🌍 **多语言拓展** | 🔵 了解 | 各语言入门 | Go/Python/Node.js 达到可做实际项目水平，Shell 能写自动化脚本，C/汇编了解即可 | — |
 | 19 | 🖥️ **前端技术** | 🔵 了解 | JavaScript 基础 | 能独立实现 React/Vue3 业务页面，理解前后端联调与 API 设计，具备全栈开发能力 | 前端类工具导航 |
 | 20 | 🧪 **测试工程** | 🟡 按需 | Spring 全家桶 + 分布式 | 能编写高质量单元/集成测试，掌握压力测试和性能测试方法论，建立完整的测试分层体系 | 测试平台（研发运维工具）|
+| 21 | 🧩 **多语言 AI/Agent 框架** | 🟠 重要 | 板块17 AI/Agent 接入 | 掌握 Java（Spring AI / LangChain4j）、Python（LangChain / AutoGen / CrewAI）、Node.js（LangChain.js / Vercel AI SDK）多语言 Agent 开发能力 | — |
+| 22 | 📐 **上下文工程（工程化落地）** | 🟠 重要 | 板块17 AI/Agent 接入 | 能在 Spring AI 体系中落地 Memory 接口、RAG 工程化、结构化输出，构建完整上下文管理方案 | — |
+| 23 | 🗺️ **Agent 模式与编排（工程实践）** | 🟠 重要 | 板块22 上下文工程 | 掌握 ReAct/Plan-Execute/Reflection 模式实践，能用 LangGraph/AutoGen/CrewAI 构建 Multi-Agent 系统，能使用主流 Agent SDK 构建生产级 Agent | — |
 
-> 📌 **推荐学习主线**（适合后端工程师）：`1 Spring` → `2 数据库` → `3 消息队列` → `4 分布式` → `5 稳定性` → `8 架构设计` → `10 系统设计面试` → 根据方向选择其余板块
+> 📌 **推荐学习主线**（适合后端工程师）：`1 Spring` → `2 数据库` → `3 消息队列` → `4 分布式` → `5 稳定性` → `8 架构设计` → `10 系统设计面试` → `17 AI 接入` → `21 多语言框架` → `22 上下文工程` → `23 Agent 编排` → 根据方向选择其余板块
 
 ---
 
@@ -334,7 +339,7 @@
 
 ### 🤖 AI/Agent 应用接入（做系统）
 
-> 💡 **本章聚焦「做系统」**——目标是交付可运行的 AI 业务代码。算法原理、Agent SDK 对比、AI 工具使用方法论等内容见 [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study)。
+> 💡 **本章聚焦「做系统」**——目标是交付可运行的 AI 业务代码。AI Coding 工具使用方法论、Harness/Eval 框架、Claude Code 源码研究等内容见 [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study)。
 
 #### 🔌 大模型 API 接入与封装
 | 方向 | 学习要点 |
@@ -372,6 +377,141 @@
 | 异步化处理 | 长时推理异步化 / 任务队列（Kafka/MQ）/ 结果回调通知 |
 | 可观测性 | 模型调用链路追踪 / Token 用量监控看板 / 异常率告警 |
 
+### 🧩 多语言 AI/Agent 框架
+
+> 💡 **本章聚焦多语言生态的 AI/Agent 工程实践**——Java（Spring AI / LangChain4j）、Python（LangChain / AutoGen / CrewAI）、Node.js（LangChain.js / Vercel AI SDK）三大语言的框架对比与应用，覆盖主流 Agent SDK 工程落地。
+
+#### ☕ Java AI/Agent 框架
+| 框架 | 学习要点 |
+|------|---------|
+| **Spring AI** | ChatClient / Advisors / EmbeddingModel / VectorStore / ToolCallback / Memory 接口 |
+| **LangChain4j** | AI Service / Tool 注解体系 / Memory 实现 / RAG 管线 / Streaming / 与 Spring 集成 |
+
+#### 🐍 Python AI/Agent 框架
+| 框架 | 学习要点 |
+|------|---------|
+| **LangChain（Python）** | Chain 组合 / LCEL 声明式链 / AgentExecutor / 工具体系 / Memory 类型 / 与 LangSmith 集成 |
+| **AutoGen** | ConversableAgent / AssistantAgent / UserProxyAgent / GroupChat / 代码执行 Agent |
+| **CrewAI** | Crew / Agent / Task / Tool 四元组 / Process 流程（顺序/并行/层级）|
+| **LlamaIndex** | Index / Retriever / QueryEngine / RAG 专项能力 / 与 LangChain 对比 |
+| **Pydantic AI** | 类型安全 Agent / 结构化输出验证 / Dependency Injection |
+| **smolagents（HF）** | Code Agent 模式 / 极简 Agent 设计 / 开源模型友好 |
+
+#### 🟨 Node.js AI/Agent 框架
+| 框架 | 学习要点 |
+|------|---------|
+| **LangChain.js** | 与 Python 版对比 / Chain / Agent / Tool 体系 / Node.js 下的流式处理 |
+| **Vercel AI SDK** | `useChat` / `useCompletion` / `streamText` / Next.js 全栈 AI 应用 |
+| **OpenAI Node SDK** | 官方 SDK 使用 / Assistants API / Streaming / Function Calling |
+
+#### 🛠️ 主流 Agent SDK 工程实践
+| SDK | 学习要点 |
+|-----|---------|
+| **OpenAI Agents SDK** | Agent + Handoff + Guardrails 三元组 / Runner / Tracing / MCP 集成 / 多 Agent 系统设计 |
+| **Google ADK** | Agent / Tool / Session / Runner / Sequential/Parallel/LoopAgent 编排原语 / Vertex AI 部署 |
+| **AWS Strands** | Model-driven Loop / Bedrock 集成 / MCP 支持 / agent_as_tool 嵌套 |
+| **Anthropic SDK** | Tool Use 原生 Loop / Streaming Tool Use / Computer Use（Beta）|
+
+### 📐 上下文工程（工程化落地）
+
+> 💡 **本章聚焦上下文工程的工程化落地**——即在业务系统中如何系统性地设计、管理和优化传递给模型的信息内容。上下文工程原理与概念见 [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study)（概念了解层）。
+
+#### 📐 上下文窗口管理（工程实践）
+- 长上下文的"迷失中间"问题在业务系统中的影响与对策
+- 不同模型上下文长度对比与实际可用长度分析
+- 有效利用上下文窗口的工程策略（分片、摘要、动态截断）
+
+#### 🗜️ 上下文压缩与对话历史管理
+- Spring AI ChatMemory 接口：`InMemoryChatMemory` / `CassandraChatMemory` / 自定义实现
+- LangChain4j ConversationMemory 实现与对话历史管理
+- 对话历史裁剪与摘要策略（滑动窗口 / 重要性排序 / 动态压缩）
+- 跨会话记忆持久化方案（Redis / 数据库）
+
+#### 🧠 Memory 记忆体系工程实践
+- **短期记忆**：Spring AI / LangChain4j 中对话历史的保留与裁剪实现
+- **长期记忆**：向量数据库持久化（Milvus / Chroma / PgVector / Redis Vector）
+- **实体记忆**：结构化知识抽取与动态注入
+- **跨会话记忆**：Session ID 管理 / 记忆版本控制 / 记忆失效策略
+
+#### 🔍 RAG 工程化落地（深度实践）
+- **Chunking 策略**：固定大小 / 句子 / 段落 / 语义切分的工程实现
+- **Embedding 工程**：批处理 Embedding / 增量更新 / Embedding 缓存
+- **混合检索实现**：向量 + BM25 混合检索服务的 Spring 集成
+- **Reranker 集成**：Cross-encoder 重排序提升检索质量
+- **GraphRAG**：知识图谱辅助检索方案
+- **Agentic RAG**：将 RAG 作为 Agent 工具的工程设计
+
+#### 📤 Structured Output 工程实践
+- **Spring AI Structured Output**：`BeanOutputConverter` / `MapOutputConverter` / `ListOutputConverter`
+- **LangChain4j AiServices**：接口方法自动结构化输出（`@SystemMessage` + 返回类型推导）
+- **Python Pydantic 约束**：LangChain with_structured_output / Pydantic AI 类型安全输出
+- **JSON Schema 精确约束**：字段类型、必选项、枚举值的工程化配置
+- **输出解析健壮性**：部分失败处理、格式修复策略、流式输出下的结构化解析
+
+#### 🔧 Tools / Function Calling 工程深化
+- **并行工具调用 vs. 顺序工具调用**的工程选型与实现
+- **工具调用的错误处理与重试策略**：超时 / 参数校验 / 降级处理
+- **主流模型工具调用能力对比**（OpenAI / Claude / Gemini / DeepSeek 差异）
+- **MCP Client 集成**：在 Java/Python 应用中作为 MCP 客户端消费 MCP Server 能力
+
+### 🗺️ Agent 模式与编排（工程实践）
+
+> 💡 **本章聚焦 Agent 模式与编排的工程落地**——从理论到可运行的代码。Agent 模式原理与 SDK 详细对比见 [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study)（原理与工具研究层），本章聚焦在业务系统中的工程实现。
+
+#### 🧠 Agent 基础模式工程实践
+| 模式 | 工程落地要点 |
+|------|------------|
+| **ReAct** | 推理 + 行动循环的代码实现 / 工具调用结果注入上下文 / 循环终止条件设计 |
+| **Plan-and-Execute** | 规划器（Planner）+ 执行器（Executor）分离架构 / 步骤依赖管理 |
+| **Reflection** | 自我评审提示词设计 / 输出质量验证 / 修正循环的终止策略 |
+| **Reflexion** | 带记忆的反思强化 / Episodic Buffer 持久化 / 经验积累机制 |
+| **Self-Ask** | 子问题分解的递归实现 / 问题依赖图管理 |
+| **Tree of Thoughts** | 树形推理路径的数据结构设计 / 回溯机制实现 |
+
+#### 🤝 Multi-Agent 模式工程实践
+- **Orchestrator-Worker**：主控 Agent 任务分发与 Worker Agent 并行执行的工程实现
+- **Supervisor**：基于质量评分的路由决策逻辑 / 反馈循环设计
+- **Swarm**：去中心化 Agent 交接（Handoff）机制 / 状态传递协议
+- **Pipeline**：线性 Agent 流水线的工程实现 / 阶段间数据契约设计
+- **Parallel Fan-out**：任务并行拆解 + 结果汇聚的异步实现（CompletableFuture / asyncio）
+
+#### 🗺️ Agent 编排框架工程实践
+| 框架 | 工程实践要点 |
+|------|------------|
+| **LangGraph（Python）** | StateGraph 构建 / 节点函数定义 / 条件边路由 / 循环图 / Checkpoint 持久化 / 流式执行 |
+| **LangGraph（Java SDK）** | 与 Spring 集成 / Java 版图构建 API |
+| **AutoGen** | ConversableAgent 配置 / GroupChatManager 实现 / 代码执行沙箱 / Skill 函数注册 |
+| **CrewAI** | Crew / Agent / Task 定义 / Process 选型（Sequential/Hierarchical）/ 工具绑定 |
+| **LangChain AgentExecutor** | 工具链组装 / 内存集成 / 错误处理 / 与 LCEL 结合 |
+
+#### 🧰 Agent SDK 工程应用
+> 聚焦工程实践，SDK 原理与对比详见 [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study) 项目。
+
+| SDK | 工程落地要点 |
+|-----|------------|
+| **OpenAI Agents SDK** | Agent 定义与工具绑定 / Handoff 实现 / Guardrails 配置 / Tracing 接入 / 多 Agent 系统构建 |
+| **Google ADK** | SequentialAgent / ParallelAgent / LoopAgent 实战 / Callbacks 钩子 / Vertex AI 部署 |
+| **AWS Strands** | Bedrock 模型接入 / 工具函数定义 / agent_as_tool 嵌套调用 / MCP Client 集成 |
+| **Anthropic SDK** | Tool Use Loop 实现 / Streaming Tool Use / Computer Use 集成 |
+
+#### ⚙️ Agent 核心能力工程实现
+- **记忆管理**：In-context Memory（对话历史管理）/ External Memory（向量数据库 CRUD）/ 跨任务记忆复用
+- **状态管理**：有状态 Agent（Checkpointing）/ 无状态 Agent 设计 / 状态持久化（Redis / 数据库）
+- **中断与恢复**：Human-in-the-loop 审批节点工程实现 / Checkpoint 机制 / 断点续传
+- **可观测性**：LangSmith / LangFuse / OpenTelemetry 集成 / Trace 追踪 / 指标监控
+- **Agent 评估**：Trajectory 评估体系 / 行为录制与回放 / 与 Harness 框架对接
+
+#### 🖥️ Computer Use / Browser Use 工程实践
+- **Anthropic Computer Use**：桌面操控（截图感知 → 鼠标/键盘操作）的工程集成
+- **Browser Use（开源框架）**：浏览器 Agent 的 DOM 解析 / 截图感知 / 标准化操作封装
+- **GUI Agent 工程挑战**：页面状态不稳定处理 / 动态渲染等待策略 / 错误恢复机制
+
+#### ⏱️ Long-running Agent 工程实践
+- **异步任务模式**：任务提交 → 轮询状态 → 结果回调的工程实现（Spring Async / CompletableFuture）
+- **任务队列设计**：Kafka/MQ 接入 / 任务状态机 / 优先级队列
+- **检查点与断点续传**：中间状态持久化方案（Redis / 数据库）/ 失败重启策略
+- **用户通知机制**：长任务完成后的 Webhook 回调 / 消息推送集成
+
 ---
 
 ## 📁 项目结构
@@ -380,7 +520,7 @@
 
 ### 🏢 美团工具服务导航 — 理论到生产的映射
 
-> 📌 **这部分是什么？** 上面 19 个板块学的都是"通用技术"，而 `美团工具服务导航/` 目录记录的是**这些技术在美团生产环境中的具体落地形态**。每学完一个技术板块，可以对照下表找到美团对应的内部系统，加深理解"真实系统是怎么做的"。
+> 📌 **这部分是什么？** 上面板块学的都是"通用技术"，而 `美团工具服务导航/` 目录记录的是**这些技术在美团生产环境中的具体落地形态**。每学完一个技术板块，可以对照下表找到美团对应的内部系统，加深理解"真实系统是怎么做的"。
 
 | 通用技术 | 美团内部对应工具 | 所在文件 |
 |---------|---------------|---------|
@@ -530,12 +670,68 @@ java_fullstack_ai_agent_study/
 │   ├── graph-risk/              #   图谱风控 / 团伙识别
 │   └── realtime-arch/           #   实时风控架构设计
 │
-├── ai-agent/                    # AI/Agent 应用接入（做系统）
-│   ├── spring-ai/               #   Spring AI 框架实践（ChatClient / Advisors）
-│   ├── rag/                     #   RAG 系统工程化（向量库集成 / 检索管线）
-│   ├── function-calling/        #   Function Calling 封装（Spring AI Function）
-│   ├── mcp-server/              #   Java/Spring 实现 MCP Server（对外暴露能力）
-│   └── stability/               #   生产级稳定性（超时/熔断/成本控制/可观测性）
+├── ai/                          # AI/Agent 全栈工程实践（三大 AI 板块统一入口）
+│   ├── ai-agent/                #   板块17：AI/Agent 应用接入（做系统）
+│   │   ├── spring-ai/           #     Spring AI 框架实践（ChatClient / Advisors）
+│   │   ├── rag/                 #     RAG 系统工程化（向量库集成 / 检索管线）
+│   │   ├── function-calling/    #     Function Calling 封装（Spring AI Function）
+│   │   ├── mcp-server/          #     Java/Spring 实现 MCP Server
+│   │   └── stability/           #     生产级稳定性（超时/熔断/成本控制/可观测性）
+│   │
+│   ├── multi-lang-frameworks/   #   板块21：多语言 AI/Agent 框架
+│   │   ├── java/                #     Java 框架（Spring AI / LangChain4j）
+│   │   │   ├── spring-ai/
+│   │   │   └── langchain4j/
+│   │   ├── python/              #     Python 框架（LangChain / AutoGen / CrewAI / LlamaIndex）
+│   │   │   ├── langchain/
+│   │   │   ├── autogen/
+│   │   │   ├── crewai/
+│   │   │   ├── llamaindex/
+│   │   │   ├── pydantic-ai/
+│   │   │   └── smolagents/
+│   │   └── nodejs/              #     Node.js 框架（LangChain.js / Vercel AI SDK）
+│   │       ├── langchainjs/
+│   │       └── vercel-ai-sdk/
+│   │
+│   ├── agent-sdk/               #   Agent SDK 工程实践（各厂商官方 SDK）
+│   │   ├── openai-agents-sdk/   #     OpenAI Agents SDK（Agent/Handoff/Guardrails）
+│   │   ├── google-adk/          #     Google Agent Development Kit（ADK）
+│   │   ├── aws-strands/         #     AWS Strands Agents SDK
+│   │   ├── anthropic-tool-use/  #     Anthropic SDK Tool Use 原生实践
+│   │   └── sdk-comparison/      #     各 SDK 横向对比与选型指南
+│   │
+│   ├── context-engineering/     #   板块22：上下文工程（工程化落地）
+│   │   ├── context-window/      #     上下文窗口管理策略
+│   │   ├── memory/              #     Memory 记忆体系（Spring AI / LangChain4j 实现）
+│   │   │   ├── short-term/      #       短期记忆（对话历史管理）
+│   │   │   ├── long-term/       #       长期记忆（向量数据库持久化）
+│   │   │   └── entity/          #       实体记忆（结构化知识抽取）
+│   │   ├── rag-advanced/        #     RAG 深度实践（GraphRAG / Agentic RAG / Reranker）
+│   │   ├── structured-output/   #     结构化输出工程（Spring AI / LangChain4j / Pydantic）
+│   │   └── tools-engineering/   #     工具调用工程深化（并行/错误处理/MCP 客户端）
+│   │
+│   └── agent-patterns/          #   板块23：Agent 模式与编排（工程实践）
+│       ├── patterns/            #     Agent 基础模式实践
+│       │   ├── react/           #       ReAct 模式
+│       │   ├── plan-execute/    #       Plan-and-Execute
+│       │   ├── reflection/      #       Reflection / Reflexion
+│       │   └── tree-of-thoughts/#       Tree of Thoughts
+│       ├── multi-agent/         #     Multi-Agent 模式工程实践
+│       │   ├── orchestrator/    #       Orchestrator-Worker 模式
+│       │   ├── supervisor/      #       Supervisor 监督者模式
+│       │   ├── swarm/           #       Swarm 去中心化交接
+│       │   └── parallel/        #       Parallel Fan-out 并行汇聚
+│       ├── orchestration/       #     编排框架工程实践
+│       │   ├── langgraph/       #       LangGraph 图结构编排
+│       │   ├── autogen/         #       AutoGen 多 Agent 对话
+│       │   └── crewai/          #       CrewAI 角色任务编排
+│       ├── agent-core/          #     Agent 核心能力工程实现
+│       │   ├── memory-mgmt/     #       记忆管理工程实践
+│       │   ├── state-mgmt/      #       状态管理（Checkpointing）
+│       │   ├── hitl/            #       Human-in-the-loop 审批节点
+│       │   └── observability/   #       可观测性（LangSmith/LangFuse）
+│       ├── computer-use/        #     Computer Use / Browser Use
+│       └── long-running/        #     Long-running Agent（异步任务工程）
 │
 └── testing/                     # 🧪 测试工程
     ├── unit-testing/            #   单元测试（JUnit 5 + Mockito）
@@ -824,7 +1020,7 @@ java_fullstack_ai_agent_study/
       <td></td>
     </tr>
     <tr>
-      <td rowspan="9"><b>☁️ 云计算 & 云原生</b></td>
+      <td rowspan="9"><b>☁️ 云计算 &amp; 云原生</b></td>
       <td>Docker（镜像构建 / 多阶段构建 / 网络模型 / Volume 管理）</td>
       <td>🔜 待开始</td>
       <td></td>
@@ -1133,6 +1329,154 @@ java_fullstack_ai_agent_study/
       <td>🔜 待开始</td>
       <td></td>
     </tr>
+    <tr>
+      <td rowspan="8"><b>🧩 多语言 AI/Agent 框架</b></td>
+      <td>Java：Spring AI（ChatClient / Advisors / Memory / VectorStore / ToolCallback）</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>Java：LangChain4j（AI Service / Tool 注解 / RAG 管线 / 与 Spring 集成）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Python：LangChain（LCEL / AgentExecutor / Memory / 与 LangSmith 集成）</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>Python：AutoGen（ConversableAgent / GroupChat / 代码执行）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Python：CrewAI（Crew / Agent / Task / Process 流程）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Python：LlamaIndex（RAG 专项 / QueryEngine / Index）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Node.js：LangChain.js / Vercel AI SDK（全栈 AI 应用）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Agent SDK 工程实践（OpenAI Agents SDK / Google ADK / AWS Strands / Anthropic SDK）</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td rowspan="9"><b>📐 上下文工程（工程化落地）</b></td>
+      <td>上下文窗口工程策略（动态截断 / 摘要 / 有效利用）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Spring AI ChatMemory 接口实现（InMemory / Cassandra / 自定义）</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>LangChain4j ConversationMemory 对话历史管理</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>长期记忆：向量数据库持久化（Milvus / Chroma / PgVector）</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>RAG 深度：Chunking / Embedding 工程 / 混合检索 / Reranker</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>GraphRAG / Agentic RAG 进阶方案</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Structured Output：Spring AI BeanOutputConverter / LangChain4j AiServices</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>Python Pydantic 结构化输出 / LangChain with_structured_output</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>工具调用工程深化（并行 / 错误处理 / MCP 客户端集成）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="12"><b>🗺️ Agent 模式与编排（工程实践）</b></td>
+      <td>ReAct / Plan-Execute / Reflection / Tree of Thoughts 模式代码实现</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Multi-Agent 模式：Orchestrator-Worker / Supervisor / Swarm / Parallel Fan-out</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LangGraph（Python）：StateGraph / 条件边 / 循环图 / Checkpoint 持久化</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>AutoGen：ConversableAgent 配置 / GroupChat / 代码执行沙箱</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>CrewAI：Crew / Agent / Task 定义 / Process 选型</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>OpenAI Agents SDK：Agent / Handoff / Guardrails / Tracing 工程实战</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>Google ADK：Sequential/Parallel/LoopAgent / Callbacks / Vertex AI 部署</td>
+      <td>🔜 待开始</td>
+      <td>🔑 重点</td>
+    </tr>
+    <tr>
+      <td>AWS Strands / Anthropic SDK Tool Use 工程实践</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Agent 记忆管理（In-context / External / 跨任务复用）工程实现</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Agent 可观测性（LangSmith / LangFuse 集成）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Computer Use / Browser Use 工程实践</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Long-running Agent（异步任务 / 检查点 / Kafka 队列 / 用户通知）</td>
+      <td>🔜 待开始</td>
+      <td></td>
+    </tr>
   </tbody>
 </table>
 
@@ -1143,8 +1487,8 @@ java_fullstack_ai_agent_study/
 | 项目 | 定位 | 内容 |
 |------|------|------|
 | [`java_study`](../java_study) | 基础理论 | Java 语言核心（含 SPI/字节码增强/序列化）、JVM 原理、IO/NIO 体系、并发深度（含虚拟线程/响应式）、数据结构与算法、设计模式与设计原则、计算机基础理论（OS/网络/原理/编译）、信息安全基础（密码学/攻防）、软件工程基础（测试/重构/CI）、数学基础、性能工程（JMH/火焰图）、调试与问题排查（Arthas/JFR）、前沿技术趋势 |
-| **本项目**（`java_fullstack_ai_agent_study`） | 工程实践 | Spring 生态、分布式架构、大数据生态、存储中间件、多语言、前端、AI/Agent 系统接入、测试工程（做系统）|
-| [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study) | AI 工程 | AI 编程方法论、上下文工程、AI 工具工程化、Harness 理论、AI Coding 工具链、大模型与 Agent 知识——用 AI 提效 |
+| **本项目**（`java_fullstack_ai_agent_study`） | 工程实践 | Spring 生态、分布式架构、大数据生态、存储中间件、多语言、前端、**AI/Agent 应用开发（Spring AI / LangChain4j / LangGraph / AutoGen 等）**、**上下文工程（工程化落地）**、**Agent 模式与编排（工程实践）**、测试工程（做系统）|
+| [`ai_coding_harness_engineering_study`](../ai_coding_harness_engineering_study) | AI 工程提效 | AI 编程方法论、AI 工具工程化（MCP/Skill/Hooks）、Harness 理论（Eval/LLM-as-Judge）、AI Coding 工具链（Claude Code / Cursor / Codex）、大模型理论了解——用 AI 提效 |
 
 ---
 
@@ -1167,6 +1511,7 @@ java_fullstack_ai_agent_study/
 | 2026-06-10 | v1.3.0 | **项目定位重构**：明确「做系统」与「用 AI 提效」的边界，删除「🧠 AI 算法理论」章节（迁移至 `ai_coding_harness_engineering_study`）；将「🤖 AI 与 Agent 应用开发」重构为「🤖 AI/Agent 应用接入（做系统）」，聚焦 Spring AI 接入、RAG 工程化、Function Calling 封装、MCP Server 开发、生产稳定性保障；新增 AI/Agent 两项目分工边界对照表；更新学习路线总览表（19 大板块）、学习进度、项目结构、关联项目说明 |
 | 2026-06-10 | v1.4.0 | **新增「🧪 测试工程」板块**：新增测试分层体系（JUnit 5 / Mockito / Spring Boot Test / Testcontainers / 契约测试 / E2E 测试）；新增测试用例设计方法论（等价类/边界值/TDD/BDD/覆盖率）；新增性能测试（JMH/JMeter/Gatling/K6/压测结果分析）；新增集成测试进阶（Testcontainers 实战/WireMock/测试数据管理/API 测试/混沌工程）；更新核心学习方向（19→20 大板块）、学习路线总览表、项目结构（`testing/` 目录）、学习进度表 |
 | 2026-06-10 | v1.5.0 | **同步关联项目描述**：更新「关联项目分工说明」表和「关联项目」章节中 `java_study` 的描述，与其 README v1.3.0 保持一致（新增 IO/NIO 体系、信息安全、软件工程、性能工程、调试排查、前沿趋势等 14 大板块完整覆盖） |
+| 2026-06-13 | v2.0.0 | **重大重构：承接上下文工程与 Agent 编排，完整构建 AI/Agent 全栈工程实践体系**。从 `ai_coding_harness_engineering_study` 承接「上下文工程」和「Agent 模式与编排」，以工程落地视角深度实践；新增「板块21：多语言 AI/Agent 框架」（Java Spring AI / LangChain4j、Python LangChain / AutoGen / CrewAI / LlamaIndex、Node.js LangChain.js / Vercel AI SDK）；新增「板块22：上下文工程（工程化落地）」（Memory 体系 / RAG 深度 / Structured Output / 工具工程化）；新增「板块23：Agent 模式与编排（工程实践）」（模式代码实现 / LangGraph / AutoGen / CrewAI / Agent SDK 工程实践 / Long-running Agent）；项目目录结构重构为统一的 `ai/` 入口（ai-agent / multi-lang-frameworks / agent-sdk / context-engineering / agent-patterns）；更新核心学习方向（20→**23**板块）、学习路线总览表、分工边界表、学习进度表、关联项目说明 |
 
 ---
 
